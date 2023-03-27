@@ -32,7 +32,7 @@
     <meta http-equiv="pragma" content="no-cache" />
 
     <!--====== Title ======-->
-    <title>Register</title>
+    <title>Congratulation | Searce Google Cloud</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">

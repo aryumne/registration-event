@@ -39,7 +39,7 @@ class ThankyouController extends Controller
         
         echo "<script>setTimeout(function(){ window.location.href = '/'; }, 5000);</script>";
 
-        return view('Public.ThankYou', $data);
+        return view('searce.congrats', $data);
     }
 
 }

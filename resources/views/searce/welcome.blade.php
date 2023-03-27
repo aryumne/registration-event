@@ -20,7 +20,7 @@
     <meta http-equiv="pragma" content="no-cache" />
 
     <!--====== Title ======-->
-    <title>Blibli Partner Gathering</title>
+    <title>Welcome | Searce Google Cloud</title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="">
@@ -83,16 +83,7 @@
                         <div>
                             <ul>
                                 <li>
-                                    @if ($login)
-                                        <a id="reg-button" class="solid" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                            style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    @else
-                                        <a id="reg-button" class="solid" href="register">Register Here</a>
-                                    @endif
+                                   <a id="reg-button" class="solid" href="register">Register Here</a>
                                 </li>
                             </ul>
                         </div>

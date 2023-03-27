@@ -31,7 +31,7 @@ class UserRegisterController extends Controller
          * If there's an ajax request to the login page assume the person has been
          * logged out and redirect them to the login page
          */
-        return view('blibli');
+        return view('searce.register');
     }
 
     /**
