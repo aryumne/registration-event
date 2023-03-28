@@ -32,10 +32,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="expires" content="Sun, 01 Jan 2014 00:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/cg.png') }}">
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>Blibli Seller Center - Jual Online Mudah, Aman &amp; Nyaman</title>
+    <title>Regisration | Searce Google Cloud<</title>
 
     <link rel="stylesheet" href="assets/blibli/custom_bootstrap.css?v=.date(YmdHis)">
 
@@ -161,7 +162,7 @@
                                             class="blu-btn form__button b-info mt-5" id="submit-registration">
                                             <div style="background-color: #efdc02 !important;font-weight: 600 !important;"
                                                 data-v-58abcc1b="" data-v-626eb588="" class="blu-ripple">
-                                                Daftar
+                                                Register Here
                                             </div>
                                         </button>
                                     </div>

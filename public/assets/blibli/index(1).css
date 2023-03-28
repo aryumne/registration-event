@@ -8823,7 +8823,8 @@ img.flag[data-v-1f0a274c] {
     margin-bottom: 0;
     font-size: 26px;
     font-weight: 600;
-    text-align: center
+    text-align: center;
+    line-height: 4rem !important;
 }
 
 .form__sub-title[data-v-1f0a274c] {
@@ -8834,7 +8835,8 @@ img.flag[data-v-1f0a274c] {
 .form__field[data-v-1f0a274c] {
     margin-bottom: 20px;
     width: 100%;
-    padding-right: 25px
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 .form__group[data-v-1f0a274c] {
@@ -8923,7 +8925,7 @@ img.flag[data-v-1f0a274c] {
     display: -ms-flexbox;
     display: flex;
     background-color: #fff;
-    padding: 140px 200px;
+    padding: 50px 100px 50px 100px;
 }
 
 .register__img[data-v-a08f6b60] {
@@ -8952,11 +8954,11 @@ img.flag[data-v-1f0a274c] {
     .register[data-v-a08f6b60] {
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
-        padding: 0 4px 0 22px
+        padding: 30px 0 0 0
     }
     .register__img[data-v-a08f6b60] {
         padding: 0 20px 24px 0;
-        margin-bottom: -200px;
+        margin-bottom: 200px;
     }
     .register__img img[data-v-a08f6b60] {
         width: 100%

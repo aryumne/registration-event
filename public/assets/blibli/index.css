@@ -2540,7 +2540,7 @@ html {
 }
 
 body {
-    background: #3D89D7;
+    /* background: #3D89D7; */
     color: rgba(0, 0, 0, .87);
     font-family: 'Montserrat';
     font-size: 14px;
@@ -9880,12 +9880,13 @@ input[type=button][data-v-3ed86544] {
     .register {
         background: url(../images/bg-register-mobile.png) center no-repeat;
         background-size: cover;
+        height: 100%;
     }
 }
 
 @media only screen and (min-width:769px) {
     .register {
-        background: url(../images/bg-register.png) center no-repeat;
+        background: url(../images/bg-register.png) left center no-repeat;
         background-size: cover;
         height: 100%;
     }

@@ -25,6 +25,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/cg.png') }}">
 
     <!--====== Magnific Popup CSS ======-->
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
@@ -83,7 +84,7 @@
                         <div>
                             <ul>
                                 <li>
-                                   <a id="reg-button" class="solid" href="register">Register Here</a>
+                                    <a id="reg-button" class="solid" href="register">Register Here</a>
                                 </li>
                             </ul>
                         </div>
@@ -403,107 +404,148 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <div class="row grid mt-35" style="position: relative; height: 824.952px;">
-                        <div class="col-lg-3 col-sm-6 mt-4" style="position: absolute; left: 0px; top: 0px;">
-                            <!-- 1 -->
-                            <div class="single-portfolio">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/speakers/erick-thohir.png?v=.date(YmdHis)" alt="">
-                                    <div class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                        <div class="portfolio-content">
-                                            <h3 class="title">Erick Thohir</h3>
-                                            <p class="text">Minister of State-Owned Enterprise</p>
-                                            </br>
-                                            <p class="text">
-                                                Born on May 30th 1970. Appointed as the Minister of State-Owned
-                                                Enterprises on October 23rd 2019.
-                                            </p>
-                                            <a style="cursor: pointer; font-size: 19px;" id="speaker-17"
-                                                role="button" tabindex="0">See more</a>
+                    <div class="row grid gap-6 mt-35" style="position: relative; height: 824.952px;">
+                        <div class="col-12">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                                    <!-- 1 -->
+                                    <div class="single-portfolio">
+                                        <div class="portfolio-image">
+                                            <img src="assets/images/speakers/erick-thohir.png?v=.date(YmdHis)"
+                                                alt="">
+                                            <div
+                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                                <div class="portfolio-content">
+                                                    <h3 class="title">Erick Thohir</h3>
+                                                    <p class="text">Minister of State-Owned Enterprise</p>
+                                                    </br>
+                                                    <p class="text">
+                                                        Born on May 30th 1970. Appointed as the Minister of State-Owned
+                                                        Enterprises on October 23rd 2019.
+                                                    </p>
+                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-17"
+                                                        role="button" tabindex="0">See more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                                    <!-- 2 -->
+                                    <div class="single-portfolio">
+                                        <div class="portfolio-image">
+                                            <img src="assets/images/speakers/kusumo.png?v=.date(YmdHis)"
+                                                alt="">
+                                            <div
+                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                                <div class="portfolio-content">
+                                                    <h3 class="title">Kusumo Martanto</h3>
+                                                    <p class="text">CEO & Co-Founder Blibli</p>
+                                                    </br>
+                                                    <p class="text">
+                                                        Kusumo Martanto is the Chief Executive Officer (CEO) and
+                                                        Co-Founder of
+                                                        Blibli.
+                                                    </p>
+                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-18"
+                                                        role="button" tabindex="0">See more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                                    <!-- 3 -->
+                                    <div class="single-portfolio">
+                                        <div class="portfolio-image">
+                                            <img src="assets/images/speakers/haikal-siregar.png?v=.date(YmdHis)"
+                                                alt="">
+                                            <div
+                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                                <div class="portfolio-content">
+                                                    <h3 class="title">Haikal Siregar</h3>
+                                                    <p class="text">President Director of Boston Consulting Group</p>
+                                                    </br>
+                                                    <p class="text">
+                                                        Haikal leads BCG in Indonesia.
+                                                    </p>
+                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-19"
+                                                        role="button" tabindex="0">See more</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6 mt-4" style="position: absolute; left: 274.984px; top: 0px;">
-                            <!-- 2 -->
-                            <div class="single-portfolio">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/speakers/kusumo.png?v=.date(YmdHis)" alt="">
-                                    <div class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                        <div class="portfolio-content">
-                                            <h3 class="title">Kusumo Martanto</h3>
-                                            <p class="text">CEO & Co-Founder Blibli</p>
-                                            </br>
-                                            <p class="text">
-                                                Kusumo Martanto is the Chief Executive Officer (CEO) and Co-Founder of
-                                                Blibli.
-                                            </p>
-                                            <a style="cursor: pointer; font-size: 19px;" id="speaker-18"
-                                                role="button" tabindex="0">See more</a>
+                        <div class="col-12">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                                    <!-- 4 -->
+                                    <div class="single-portfolio">
+                                        <div class="portfolio-image">
+                                            <img src="assets/images/speakers/madeline.jpg?v=.date(YmdHis)"
+                                                alt="">
+                                            <div
+                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                                <div class="portfolio-content">
+                                                    <h3 class="title">Madeleine de Guzman</h3>
+                                                    <p class="text">Sector Lead Google Indonesia</p>
+                                                    </br>
+                                                    <p class="text">
+                                                        Madeleine de Guzman is currently the Sector Lead for Google
+                                                        Indonesia,
+                                                        managing verticals like eCommerce, Travel, Finance and Apps.
+                                                    </p>
+                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-20"
+                                                        role="button" tabindex="0">See more</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mt-4" style="position: absolute; left: 549.968px; top: 0px;">
-                            <!-- 3 -->
-                            <div class="single-portfolio">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/speakers/haikal-siregar.png?v=.date(YmdHis)"
-                                        alt="">
-                                    <div class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                        <div class="portfolio-content">
-                                            <h3 class="title">Haikal Siregar</h3>
-                                            <p class="text">President Director of Boston Consulting Group</p>
-                                            </br>
-                                            <p class="text">
-                                                Haikal leads BCG in Indonesia.
-                                            </p>
-                                            <a style="cursor: pointer; font-size: 19px;" id="speaker-19"
-                                                role="button" tabindex="0">See more</a>
+                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                                    <!-- 5 -->
+                                    <div class="single-portfolio">
+                                        <div class="portfolio-image">
+                                            <img src="assets/images/speakers/satrio.png?v=.date(YmdHis)"
+                                                alt="">
+                                            <div
+                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                                <div class="portfolio-content">
+                                                    <h3 class="title">BE Satrio</h3>
+                                                    <p class="text">Peneliti Litbang Kompas</p>
+                                                    </br>
+                                                    <p class="text">
+                                                        Professional researcher with 24 years experience.
+                                                    </p>
+                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-21"
+                                                        role="button" tabindex="0">See more</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mt-4" style="position: absolute; left: 0px; top: 274.984px;">
-                            <!-- 4 -->
-                            <div class="single-portfolio">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/speakers/madeline.jpg?v=.date(YmdHis)" alt="">
-                                    <div class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                        <div class="portfolio-content">
-                                            <h3 class="title">Madeleine de Guzman</h3>
-                                            <p class="text">Sector Lead Google Indonesia</p>
-                                            </br>
-                                            <p class="text">
-                                                Madeleine de Guzman is currently the Sector Lead for Google Indonesia,
-                                                managing verticals like eCommerce, Travel, Finance and Apps.
-                                            </p>
-                                            <a style="cursor: pointer; font-size: 19px;" id="speaker-20"
-                                                role="button" tabindex="0">See more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 mt-4"
-                            style="position: absolute; left: 274.984px; top: 274.984px;">
-                            <!-- 5 -->
-                            <div class="single-portfolio">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/speakers/satrio.png?v=.date(YmdHis)" alt="">
-                                    <div class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                        <div class="portfolio-content">
-                                            <h3 class="title">BE Satrio</h3>
-                                            <p class="text">Peneliti Litbang Kompas</p>
-                                            </br>
-                                            <p class="text">
-                                                Professional researcher with 24 years experience.
-                                            </p>
-                                            <a style="cursor: pointer; font-size: 19px;" id="speaker-21"
-                                                role="button" tabindex="0">See more</a>
+                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                                    <!-- 6 -->
+                                    <div class="single-portfolio">
+                                        <div class="portfolio-image">
+                                            <img src="assets/images/speakers/yohanes-elniko-dimas.jpg?v=.date(YmdHis)"
+                                                alt="">
+                                            <div
+                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                                <div class="portfolio-content">
+                                                    <h3 class="title">Yohanes Elniko Dimas</h3>
+                                                    <p class="text">Senior Fleet Management Manager</p>
+                                                    </br>
+                                                    <p class="text">
+                                                        As Senior Fleet Management Management with 9 years experience in
+                                                        Blibli.
+                                                    </p>
+                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-15"
+                                                        role="button" tabindex="0">See more</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -526,7 +568,8 @@
                         <div class="col-4 py-3 px-4">
                             <img src="assets/images/aiven-footer.png" alt="Aiven" class="d-block w-100">
                         </div>
-                        <div class="col-4 py-3 px-4" style="border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0;">
+                        <div class="col-4 py-3 px-4"
+                            style="border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0;">
                             <img src="assets/images/fivetran-footer.png" alt="Fivetran" class="d-block w-100">
                         </div>
                         <div class="col-4 py-3 px-4">
@@ -536,8 +579,8 @@
                 </div>
                 <div class="col-md-2 col-12">
                     <div class="row pt-3 d-flex justify-content-center">
-                            <img src="assets/images/intel-footer.png"  alt="Intel">
-                        </div>
+                        <img src="assets/images/intel-footer.png" alt="Intel">
+                    </div>
                 </div>
             </div> <!-- row -->
             <div class="row">
@@ -656,6 +699,15 @@
             $('#speaker-4').click(function() {
                 $('.modal-body').append(
                     '<img src="assets/images/speakers/christian-ng.jpg?v=.date(YmdHis)" alt=""> <div style="padding-top: 1rem;" class="portfolio-overlay d-flex align-items-center justify-content-center"> <div class="portfolio-content"> <h3 class="title">Christian Ng</h3> <h4 style="font-weight: normal;" class="title">Vice President of Handphone Category</h4> <br> <p class="text" style="font-size: 14px;">Christian Ng as a Vice President of Handphone, Tablet and Accessories Category with 7 years experience in Blibli.</p> <br> <p class="text" style="font-size: 14px;">He focused on building relationships with brands and seller partners, while developing business growth and increasing sales both in retail and marketplace in the Handphone, Tablet and Accessories Category.</p> <br> <p class="text" style="font-size: 14px;">In the same time, develop Trade-In Centre and O2O (Click n Collect) Solutions for Seller Partners.</p> <br> </div> </div>'
+                );
+                $('#modal').modal({
+                    show: true,
+                    focus: false
+                })
+            });
+            $('#speaker-5').click(function() {
+                $('.modal-body').append(
+                    '<img src="assets/images/speakers/yohanes-elniko-dimas.jpg?v=.date(YmdHis)" alt=""> <div style="padding-top: 1rem;" class="portfolio-overlay d-flex align-items-center justify-content-center"> <div class="portfolio-content"> <h3 class="title">Christian Ng</h3> <h4 style="font-weight: normal;" class="title">Vice President of Handphone Category</h4> <br> <p class="text" style="font-size: 14px;">Christian Ng as a Vice President of Handphone, Tablet and Accessories Category with 7 years experience in Blibli.</p> <br> <p class="text" style="font-size: 14px;">He focused on building relationships with brands and seller partners, while developing business growth and increasing sales both in retail and marketplace in the Handphone, Tablet and Accessories Category.</p> <br> <p class="text" style="font-size: 14px;">In the same time, develop Trade-In Centre and O2O (Click n Collect) Solutions for Seller Partners.</p> <br> </div> </div>'
                 );
                 $('#modal').modal({
                     show: true,
