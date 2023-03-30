@@ -266,117 +266,16 @@
                                 <div class="card-body">
                                     <table id="agenda-table" class="table table-borderless">
                                         <tbody>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">KEYNOTE SPEECH: BLIBLI ECOSYSTEM</b>
-                                                    <br>
-                                                    Kusumo Martanto – Chief Executive Officer & Co-Founder Blibli
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">MARKET INSIGHT AND TRENDS 2021
-                                                    </b>
-                                                    <br>
-                                                    <p class='text-table'>Memahami trend belanja konsumen pasca
-                                                        post-normal</p>
-                                                    Madeleine de Guzman – Sector Lead Google Indonesia
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">BLIBLI 360: LAYANAN ANDALAN BLIBLI BUAT
-                                                        JAMIN PELANGGAN NYAMAN
-                                                    </b>
-                                                    <br>
-                                                    <p class='text-table'>Memaksimalkan layanan Blibli yang membantu
-                                                        meningkatkan loyalitas konsumen terhadap toko di Blibli</p>
-                                                    Azizah Purwitasari | Gladys Haliman | Yohanes Elniko Dimas | Rency
-                                                    Reges
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">BLIBLI TODAY: INOVASI BIKIN BISNIS MAKIN
-                                                        JEMPOLAN
-                                                    </b>
-                                                    <br>
-                                                    <p class='text-table'>Pahami cara kerja dan pemanfaatan inovasi
-                                                        produk Blibli seperti: Tukar-Tambah (Trade-In), 2 jam sampai
-                                                        (2HD), Blibli Hasannah, Bliklan, dan bisnis B2B untuk
-                                                        meningkatkan potensi Binsis di Blibli</p>
-                                                    Stephanie Santoso | Christian Ng | Sandy Kusuma | Wisnu Wijaya |
-                                                    Jakop Parlindungan
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">BLIBLI TECHNOLOGY: MACHINE LEARNING BANTU
-                                                        JUALAN MAKIN CUAN
-                                                    </b>
-                                                    <br>
-                                                    <p class='text-table'>Pelajari cara kerja algoritma machine
-                                                        learning dan sistem rekomendasi Blibli untuk memaksimalkan
-                                                        performa toko
-                                                    </p>
-                                                    Fanky Mulia | Endro Yuniaryo
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">BLIBLI NEXT-CHAPTER: THE ROADMAP
-                                                    </b>
-                                                    <br>
-                                                    <p class='text-table'>Ketahui hasil perjalanan Blibli sepanjang
-                                                        2021 dan fokus strategi Blibli kedepan
-                                                    </p>
-                                                    Yohanes Lukiman - SVP of Business Development Blibli
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">BLIBLI FOR INDONESIA: RAHASIA KOLABORASI
-                                                        ASIK BIKIN JUALAN SEMAKIN NAIK
-                                                    </b>
-                                                    <br>
-                                                    <p class='text-table'> Ketahui lebih lanjut mengenai hasil riset
-                                                        Blibli bersama BCG dan Kompas, serta berbagai program dari
-                                                        Galeri Indonesia untuk UMKM Indonesia
-                                                    </p>
-                                                    BE Satrio | Andreas Ardian Pramaditya | Testimoni Seller
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">
-                                                        BLIBLI END-YEAR CAMPAIGN 2021:
+                                            @foreach ($agendas as $event)
+                                                <tr>
+                                                    <td>
+                                                        <b style="color: #000;">{{ $event['title'] }}</b>
                                                         <br>
-                                                        RAIH KESEMPATAN EMAS, UNTUNG DI UJUNG TAHUN
-                                                    </b>
-                                                    <br>
-                                                    <p class='text-table'>Bersiap menghadapi Harbolnas 2021 bersama
-                                                        Blibli</p>
-                                                    Wilson Kiantoro
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">PARTNER AWARD 2021:</b>
-                                                    <br>
-                                                    <p class='text-table'>Nantikan pengumuman pemenang Blibli Partner
-                                                        Award</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    SESI SPECIAL : STAND-UP COMEDY
-                                                    <br>
-                                                    <b style="color: #000;">PROBLEMATIKA HUBUNGAN SELLER DAN KONSUMEN
-                                                        INDONESIA</b>
-                                                    <br>
-                                                    Cak Lontong
-                                                </td>
-                                            </tr>
+                                                        <p class='text-table'>{{ $event['time'] }}</p>
+                                                        {{ $event['speaker'] }}
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -405,152 +304,36 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="row grid gap-6 mt-35" style="position: relative; height: 824.952px;">
-                        <div class="col-12">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
-                                    <!-- 1 -->
-                                    <div class="single-portfolio">
-                                        <div class="portfolio-image">
-                                            <img src="assets/images/speakers/erick-thohir.png?v=.date(YmdHis)"
-                                                alt="">
-                                            <div
-                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                                <div class="portfolio-content">
-                                                    <h3 class="title">Erick Thohir</h3>
-                                                    <p class="text">Minister of State-Owned Enterprise</p>
-                                                    </br>
-                                                    <p class="text">
-                                                        Born on May 30th 1970. Appointed as the Minister of State-Owned
-                                                        Enterprises on October 23rd 2019.
-                                                    </p>
-                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-17"
-                                                        role="button" tabindex="0">See more</a>
+                        @foreach (array_chunk($speakers, ceil(count($speakers)/2)) as $speaker)
+                            <div class="col-12">
+                                <div class="row justify-content-center">
+                                    @foreach ($speaker as $sp)
+                                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                                            <div class="single-portfolio">
+                                                <div class="portfolio-image">
+                                                    <img src="assets/images/speakers/{{ $sp['filename'] }}?v=.date(YmdHis)"
+                                                        alt="{{ $sp['name'] }}" style="height:300px;object-fit:cover;">
+                                                    <div
+                                                        class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                                        <div class="portfolio-content">
+                                                            <h3 class="title">{{ $sp['name'] }}</h3>
+                                                            <p class="text">{{ $sp['job'] }}</p>
+                                                            </br>
+                                                            <p class="text">
+                                                                {{ strlen($sp['bio']) > 100 ? $sp['bio'] = substr($sp['bio'], 0, 100) . '...' : $sp['bio']; }}
+                                                            </p>
+                                                            <a style="cursor: pointer; font-size: 19px;"
+                                                                id="speaker-{{ $loop->iteration }}" role="button" tabindex="0">See
+                                                                more</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
-                                    <!-- 2 -->
-                                    <div class="single-portfolio">
-                                        <div class="portfolio-image">
-                                            <img src="assets/images/speakers/kusumo.png?v=.date(YmdHis)"
-                                                alt="">
-                                            <div
-                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                                <div class="portfolio-content">
-                                                    <h3 class="title">Kusumo Martanto</h3>
-                                                    <p class="text">CEO & Co-Founder Blibli</p>
-                                                    </br>
-                                                    <p class="text">
-                                                        Kusumo Martanto is the Chief Executive Officer (CEO) and
-                                                        Co-Founder of
-                                                        Blibli.
-                                                    </p>
-                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-18"
-                                                        role="button" tabindex="0">See more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
-                                    <!-- 3 -->
-                                    <div class="single-portfolio">
-                                        <div class="portfolio-image">
-                                            <img src="assets/images/speakers/haikal-siregar.png?v=.date(YmdHis)"
-                                                alt="">
-                                            <div
-                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                                <div class="portfolio-content">
-                                                    <h3 class="title">Haikal Siregar</h3>
-                                                    <p class="text">President Director of Boston Consulting Group</p>
-                                                    </br>
-                                                    <p class="text">
-                                                        Haikal leads BCG in Indonesia.
-                                                    </p>
-                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-19"
-                                                        role="button" tabindex="0">See more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
-                                    <!-- 4 -->
-                                    <div class="single-portfolio">
-                                        <div class="portfolio-image">
-                                            <img src="assets/images/speakers/madeline.jpg?v=.date(YmdHis)"
-                                                alt="">
-                                            <div
-                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                                <div class="portfolio-content">
-                                                    <h3 class="title">Madeleine de Guzman</h3>
-                                                    <p class="text">Sector Lead Google Indonesia</p>
-                                                    </br>
-                                                    <p class="text">
-                                                        Madeleine de Guzman is currently the Sector Lead for Google
-                                                        Indonesia,
-                                                        managing verticals like eCommerce, Travel, Finance and Apps.
-                                                    </p>
-                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-20"
-                                                        role="button" tabindex="0">See more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
-                                    <!-- 5 -->
-                                    <div class="single-portfolio">
-                                        <div class="portfolio-image">
-                                            <img src="assets/images/speakers/satrio.png?v=.date(YmdHis)"
-                                                alt="">
-                                            <div
-                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                                <div class="portfolio-content">
-                                                    <h3 class="title">BE Satrio</h3>
-                                                    <p class="text">Peneliti Litbang Kompas</p>
-                                                    </br>
-                                                    <p class="text">
-                                                        Professional researcher with 24 years experience.
-                                                    </p>
-                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-21"
-                                                        role="button" tabindex="0">See more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
-                                    <!-- 6 -->
-                                    <div class="single-portfolio">
-                                        <div class="portfolio-image">
-                                            <img src="assets/images/speakers/yohanes-elniko-dimas.jpg?v=.date(YmdHis)"
-                                                alt="">
-                                            <div
-                                                class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                                <div class="portfolio-content">
-                                                    <h3 class="title">Yohanes Elniko Dimas</h3>
-                                                    <p class="text">Senior Fleet Management Manager</p>
-                                                    </br>
-                                                    <p class="text">
-                                                        As Senior Fleet Management Management with 9 years experience in
-                                                        Blibli.
-                                                    </p>
-                                                    <a style="cursor: pointer; font-size: 19px;" id="speaker-15"
-                                                        role="button" tabindex="0">See more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -715,165 +498,6 @@
                 })
             });
         });
-    </script>
-
-    <script>
-        // Create Countdown
-        var countDownDate = new Date("Aug 27, 2021 10:00:00").getTime();
-
-        var now = new Date().getTime();
-
-        var distance = countDownDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-        var Countdown = {
-
-            // Backbone-like structure
-            $el: $('.countdown'),
-
-            // Params
-            countdown_interval: null,
-            total_seconds: 0,
-
-            // Initialize the countdown  
-            init: function() {
-
-                // DOM
-                this.$ = {
-                    hours: this.$el.find('.bloc-time.hours .figure'),
-                    minutes: this.$el.find('.bloc-time.min .figure'),
-                    seconds: this.$el.find('.bloc-time.sec .figure')
-                };
-
-                // Init countdown values
-
-                if (days > 0) {
-                    this.values = {
-                        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 24,
-                        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-                        seconds: Math.floor((distance % (1000 * 60)) / 1000),
-                    };
-                } else {
-                    this.values = {
-                        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-                        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-                        seconds: Math.floor((distance % (1000 * 60)) / 1000),
-                    };
-                }
-
-                // Initialize total seconds
-                this.total_seconds = this.values.hours * 60 * 60 + (this.values.minutes * 60) + this.values.seconds;
-
-                // Animate countdown to the end 
-                this.count();
-            },
-
-            count: function() {
-
-                var that = this,
-                    $hour_1 = this.$.hours.eq(0),
-                    $hour_2 = this.$.hours.eq(1),
-                    $min_1 = this.$.minutes.eq(0),
-                    $min_2 = this.$.minutes.eq(1),
-                    $sec_1 = this.$.seconds.eq(0),
-                    $sec_2 = this.$.seconds.eq(1);
-
-                this.countdown_interval = setInterval(function() {
-
-                    if (that.total_seconds > 0) {
-
-                        --that.values.seconds;
-
-                        if (that.values.minutes >= 0 && that.values.seconds < 0) {
-
-                            that.values.seconds = 59;
-                            --that.values.minutes;
-                        }
-
-                        if (that.values.hours >= 0 && that.values.minutes < 0) {
-
-                            that.values.minutes = 59;
-                            --that.values.hours;
-                        }
-
-                        // Update DOM values
-                        // Hours
-                        that.checkHour(that.values.hours, $hour_1, $hour_2);
-
-                        // Minutes
-                        that.checkHour(that.values.minutes, $min_1, $min_2);
-
-                        // Seconds
-                        that.checkHour(that.values.seconds, $sec_1, $sec_2);
-
-                        --that.total_seconds;
-                    } else {
-                        clearInterval(that.countdown_interval);
-                    }
-                }, 1000);
-            },
-
-            animateFigure: function($el, value) {
-                var that = this,
-                    $top = $el.find('.top'),
-                    $bottom = $el.find('.bottom'),
-                    $back_top = $el.find('.top-back'),
-                    $back_bottom = $el.find('.bottom-back');
-
-                // Before we begin, change the back value
-                $back_top.find('span').html(value);
-
-                // Also change the back bottom value
-                $back_bottom.find('span').html(value);
-
-                // Then animate
-                TweenMax.to($top, 0.8, {
-                    rotationX: '-180deg',
-                    transformPerspective: 300,
-                    ease: Quart.easeOut,
-                    onComplete: function() {
-
-                        $top.html(value);
-
-                        $bottom.html(value);
-
-                        TweenMax.set($top, {
-                            rotationX: 0
-                        });
-                    }
-                });
-
-                TweenMax.to($back_top, 0.8, {
-                    rotationX: 0,
-                    transformPerspective: 300,
-                    ease: Quart.easeOut,
-                    clearProps: 'all'
-                });
-            },
-
-            checkHour: function(value, $el_1, $el_2) {
-
-                var val_1 = value.toString().charAt(0),
-                    val_2 = value.toString().charAt(1),
-                    fig_1_value = $el_1.find('.top').html(),
-                    fig_2_value = $el_2.find('.top').html();
-
-                if (value >= 10) {
-
-                    // Animate only if the figure has changed
-                    if (fig_1_value !== val_1) this.animateFigure($el_1, val_1);
-                    if (fig_2_value !== val_2) this.animateFigure($el_2, val_2);
-                } else {
-
-                    // If we are under 10, replace first figure with 0
-                    if (fig_1_value !== '0') this.animateFigure($el_1, 0);
-                    if (fig_2_value !== val_1) this.animateFigure($el_2, val_1);
-                }
-            }
-        };
-
-        // Let's go !
-        Countdown.init();
     </script>
 
     <!--====== Bootstrap js ======-->
