@@ -80,14 +80,14 @@
                                 <li class="nav-item"><a class="page-scroll" href="#speakers">Speakers</a></li>
                             </ul>
                         </div>
-                        
-                        <div class="px-md-2">
+                        <div class="pr-lg-5 pb-lg-1">
                             <ul>
                                 <li>
                                     <a id="reg-button" class="solid px-3 py-2" href="register">Register Here</a>
                                 </li>
                             </ul>
                         </div>
+                        
                         <a class="navbar-brand" style="margin-right: 0 !important;" href="/">
                             <img class="logo-nav-gcloud" src="assets/images/gcloud.png" alt="Logo">
                         </a>
