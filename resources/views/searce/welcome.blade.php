@@ -70,9 +70,9 @@
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg">
                         <a class="navbar-brand" href="/">
-                            <img class="logo-nav" src="assets/images/navbrand.png" alt="Logo">
+                            <img class="logo-nav-searce" src="assets/images/searce.png" alt="Logo">
                         </a>
-
+                        
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item"><a class="page-scroll" href="#home">About</a></li>
@@ -80,14 +80,17 @@
                                 <li class="nav-item"><a class="page-scroll" href="#speakers">Speakers</a></li>
                             </ul>
                         </div>
-
-                        <div>
+                        
+                        <div class="px-md-2">
                             <ul>
                                 <li>
-                                    <a id="reg-button" class="solid" href="register">Register Here</a>
+                                    <a id="reg-button" class="solid px-3 py-2" href="register">Register Here</a>
                                 </li>
                             </ul>
                         </div>
+                        <a class="navbar-brand" style="margin-right: 0 !important;" href="/">
+                            <img class="logo-nav-gcloud" src="assets/images/gcloud.png" alt="Logo">
+                        </a>
                     </nav> <!-- navbar -->
                 </div>
             </div> <!-- row -->
@@ -320,11 +323,11 @@
                                                             <p class="text">{{ $sp['job'] }}</p>
                                                             </br>
                                                             <p class="text">
-                                                                {{ strlen($sp['bio']) > 100 ? $sp['bio'] = substr($sp['bio'], 0, 100) . '...' : $sp['bio']; }}
+                                                                {{ strlen($sp['bio']) > 120 ? $sp['bio'] = substr($sp['bio'], 0, 120) . '...' : $sp['bio']; }}
                                                             </p>
-                                                            <a style="cursor: pointer; font-size: 19px;"
+                                                            {{-- <a style="cursor: pointer; font-size: 19px;"
                                                                 id="speaker-{{ $loop->iteration }}" role="button" tabindex="0">See
-                                                                more</a>
+                                                                more</a> --}}
                                                         </div>
                                                     </div>
                                                 </div>

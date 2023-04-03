@@ -3877,8 +3877,11 @@ p {
 }
 
 @media only screen and (max-width: 767px) {
-  .logo-nav {
-    height: 25px;
+  .logo-nav-searce {
+    height: 20px
+  }
+  .logo-nav-gcloud {
+    height: 25px
   }
   .join-us {
     font-size:12px !important;
@@ -3897,8 +3900,11 @@ p {
 }
 
 @media only screen and (min-width: 768px) {
-  .logo-nav {
-    height: 35px
+  .logo-nav-searce {
+    height: 30px
+  }
+  .logo-nav-gcloud {
+    height: 40px
   }
   .join-us {
     font-size:24px;

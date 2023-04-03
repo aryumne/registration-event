@@ -71,7 +71,7 @@ class IndexController extends Controller
                 'filename' => 'Benedikta.jpg',
                 'name' => 'Benedikta Satya',
                 'job' => 'Country Director, Searce',
-                'bio' => 'Bene is responsible for overseeing the overall business in Searce Indonesia.Monitoring the revenue achievement, client base expansions as well as building the entire Indonesia team structure are also part of her main responsibility.'
+                'bio' => 'Bene is responsible for overseeing the overall business in Searce Indonesia, and monitoring the revenue achievement.'
             ],
             [
                 'filename' => 'Beny.JPG',
@@ -83,19 +83,19 @@ class IndexController extends Controller
                 'filename' => 'Budi_Kusuma_Utama.jpeg',
                 'name' => 'Budi Kusuma Utama',
                 'job' => 'Senior Solution Architect, Aiven',
-                'bio' => 'Budi is a Senior Presales Solution Architect at Aiven. He has been passionate about internet technology ever since he began his work as a web developer more than 20 years ago.'
+                'bio' => 'Budi is a Senior Presales Solution Architect at Aiven. Budi has been passionate about internet technology.'
             ],
             [
                 'filename' => 'Felicity_Burrows.png',
                 'name' => 'Felicity Burrows',
                 'job' => 'Alliance Manager, Fivetran',
-                'bio' => 'Felicity Burrows is an Alliance Manager based in Singapore. Felicity spent the last 18 months at Fivetran building the SI partner ecosystem from scratch for the South East Asia region including India and Korea.'
+                'bio' => 'Felicity Burrows is an Alliance Manager based in Singapore who spent the last 18 months at Fivetran.'
             ],
             [
                 'filename' => 'Heryudi_Ganesha.jpg',
                 'name' => 'Heryudi Ganesha',
                 'job' => 'VP of IT Operations and Infrastructure at Jojonomic',
-                'bio' => 'Often called by his nickname Yudi, he has extensive experience in IT operations, infrastructure, and service delivery management for over 15 years. Yudi has worked for various organizations and in his contribution in managing teams.'
+                'bio' => 'Budi has extensive experience in IT operations, infrastructure, and service delivery management for over 15 years.'
             ]
         ];
         return view('searce.welcome', [
