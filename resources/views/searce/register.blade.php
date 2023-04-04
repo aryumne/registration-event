@@ -101,7 +101,7 @@
                                                 <div class="form-group col-md-6">
                                                     <div data-v-bfe2d22e="" data-v-1f0a274c="" class="blu-field">
                                                         <input value="{{ old('last_name') }}" data-v-1f0a274c=""
-                                                            data-v-bfe2d22e="" name="last_name" required type="text"
+                                                            data-v-bfe2d22e="" name="last_name" type="text"
                                                             class="form-control form__input" id="lastName">
                                                         <label data-v-1f0a274c="" data-v-bfe2d22e=""
                                                             for="last_name">Last
