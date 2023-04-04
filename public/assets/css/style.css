@@ -3883,6 +3883,10 @@ p {
   .logo-nav-gcloud {
     height: 30px
   }
+  .thanks-lg {
+    display: none;
+  }
+  
   .join-us {
     font-size:12px !important;
     line-height:13px !important;
@@ -3903,6 +3907,9 @@ p {
   .logo-nav-searce {
     height: 30px;
     margin-top: -16px;
+  }
+  .thanks-sm {
+    display: none;
   }
   .logo-nav-gcloud {
     height: 50px

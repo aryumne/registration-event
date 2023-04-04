@@ -81,7 +81,14 @@
     </div>
     <section style="background:url('assets/images/section-speaker.png') no-repeat;background-size: cover; height:70%">
             <div class="row d-flex align-items-center justify-content-center " style="height: 100%">
-                <h2 style="color: #fff;font-weight:600;" class="text-center fw-bold">Thank You For Your Registration</h2>
+                <h2 style="color: #fff;font-weight:600; line-height:3rem;" class="text-center fw-bold thanks-lg">
+                    Thank You For Your Registration </br>
+                    We will get back to you for your seat confirmation within 7 days
+                </h2>
+                <h5 style="color: #fff;font-weight:600; font-size:1.5rem" class="px-4 text-center thanks-sm">
+                    Thank You For Your Registration
+                    We will get back to you for your seat confirmation within 7 days
+                </h5>
             </div>
     </section>
     <section class="footer-area footer-dark py-5">
