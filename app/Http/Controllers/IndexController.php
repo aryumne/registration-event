@@ -104,4 +104,9 @@ class IndexController extends Controller
         ]);
 
     }
+
+
+    public function dashboard() {
+        return view('admin.pages.index');
+    }
 }

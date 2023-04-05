@@ -26,6 +26,14 @@ class UserRegisterController extends Controller
      *
      * @return mixed
      */
+
+    public function index()
+    {
+        $users = User::all();
+        return view('admin.pages.users', [
+            'users' => $users
+        ]);
+    }
     public function showRegister()
     {
         /*
@@ -54,12 +62,12 @@ class UserRegisterController extends Controller
                 'email' => 'required',
             ]);
 
-            if($validator->fails()) throw new Exception (json_encode($validator->errors()));
+            if ($validator->fails()) throw new Exception(json_encode($validator->errors()));
             $data = $request->all();
             $data['subqis'] = $url[0];
             $user = User::create($data);
 
-            if(!$user) throw new Exception ('Failed store user');
+            if (!$user) throw new Exception('Failed store user');
             // $email = $user->email;
             // $subject = "Email Confirmation";
 
@@ -73,7 +81,7 @@ class UserRegisterController extends Controller
             // });
             return redirect('/thankyou');
         } catch (Exception $e) {
-            Log::info('Error Registration: '.$e->getMessage());
+            Log::info('Error Registration: ' . $e->getMessage());
             return back()->withInput()->with('error', 'Failed to register');
         }
     }
