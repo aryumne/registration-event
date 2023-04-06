@@ -2,12 +2,14 @@
 
 namespace Rap2hpoutre\FastExcel;
 
-use Box\Spout\Reader\CSV\Reader as CSVReader;
-use Box\Spout\Reader\ReaderInterface;
-use Box\Spout\Writer\CSV\Writer as CSVWriter;
-use Box\Spout\Writer\WriterInterface;
 use Generator;
 use Illuminate\Support\Collection;
+use OpenSpout\Reader\CSV\Options as CsvReaderOptions;
+use OpenSpout\Reader\CSV\Reader;
+use OpenSpout\Reader\ReaderInterface;
+use OpenSpout\Writer\CSV\Options as CsvWriterOptions;
+use OpenSpout\Writer\CSV\Writer;
+use OpenSpout\Writer\WriterInterface;
 
 /**
  * Class FastExcel.
@@ -16,6 +18,7 @@ class FastExcel
 {
     use Importable;
     use Exportable;
+
     /**
      * @var Collection|Generator|array
      */
@@ -64,9 +67,9 @@ class FastExcel
     /**
      * FastExcel constructor.
      *
-     * @param Collection|Generator|array|null $data
+     * @param array|Generator|Collection|null $data
      */
-    public function __construct($data = null)
+    public function __construct(array|Generator|Collection $data = null)
     {
         $this->data = $data;
     }
@@ -181,18 +184,18 @@ class FastExcel
     }
 
     /**
-     * @param \Box\Spout\Reader\ReaderInterface|\Box\Spout\Writer\WriterInterface $reader_or_writer
+     * @param \OpenSpout\Reader\ReaderInterface|\OpenSpout\Writer\WriterInterface $reader_or_writer
      */
     protected function setOptions(&$reader_or_writer)
     {
-        if ($reader_or_writer instanceof CSVReader || $reader_or_writer instanceof CSVWriter) {
-            $reader_or_writer->setFieldDelimiter($this->csv_configuration['delimiter']);
-            $reader_or_writer->setFieldEnclosure($this->csv_configuration['enclosure']);
-            if ($reader_or_writer instanceof CSVReader) {
-                $reader_or_writer->setEncoding($this->csv_configuration['encoding']);
+        if ($reader_or_writer instanceof CsvReaderOptions || $reader_or_writer instanceof CsvWriterOptions) {
+            $reader_or_writer->FIELD_DELIMITER = $this->csv_configuration['delimiter'];
+            $reader_or_writer->FIELD_ENCLOSURE = $this->csv_configuration['enclosure'];
+            if ($reader_or_writer instanceof CsvReaderOptions) {
+                $reader_or_writer->ENCODING = $this->csv_configuration['encoding'];
             }
-            if ($reader_or_writer instanceof CSVWriter) {
-                $reader_or_writer->setShouldAddBOM($this->csv_configuration['bom']);
+            if ($reader_or_writer instanceof CsvWriterOptions) {
+                $reader_or_writer->SHOULD_ADD_BOM = $this->csv_configuration['bom'];
             }
         }
 

@@ -13,7 +13,7 @@
                                 elit. Sapiente corrupti molestiae aliquam odio, possimus rerum esse
                                 molestias similique aspernatur necessitatibus iusto consequatur qui
                                 impedit cumque ipsum? Veniam quam qui atque!</p>
-                            <a class="btn btn-primary p-3" href="{{ route('users') }}">
+                            <a class="btn btn-primary p-3" href="{{ route('users.index') }}">
                                 Show my participants
                                 <i class="ms-1" data-feather="arrow-right"></i>
                             </a>

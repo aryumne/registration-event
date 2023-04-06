@@ -28,7 +28,7 @@
                     data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="{{ route('dashboard') }}">Settings</a></li>
-                    <li><a class="dropdown-item" href="{{ route('dashboard') }}">Logout</a></li>
+                    <li><a class="dropdown-item" href="{{ route('accounts.destroy') }}">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -43,20 +43,20 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <a class="nav-link {{ request()->routeIs('users') ? 'active' : null }}" href="{{ route('users') }}">
+                        <a class="nav-link {{ request()->routeIs('users.*') ? 'active' : null }}" href="{{ route('users.index') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Participants
                         </a>
                         <div class="sb-sidenav-menu-heading">Manage</div>
-                        <a class="nav-link" href="{{ route('dashboard') }}">
+                        <a class="nav-link {{ request()->routeIs('events.*') ? 'active' : null }}" href="{{ route('events.index') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Events
                         </a>
-                        <a class="nav-link" href="{{ route('dashboard') }}">
+                        <a class="nav-link {{ request()->routeIs('accounts.*') ? 'active' : null }}" href="{{ route('accounts.index') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Accounts
                         </a>
-                        <a class="nav-link" href="{{ route('dashboard') }}">
+                        <a class="nav-link {{ request()->routeIs('gates.*') ? 'active' : null }}" href="{{ route('gates.index') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Roles & Permissions
                         </a>

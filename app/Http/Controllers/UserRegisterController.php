@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Mail;
-use App\Models\User;
 use Exception;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Contracts\Auth\Guard;
+use Rap2hpoutre\FastExcel\FastExcel;
 use Illuminate\Support\Facades\Validator;
 
 class UserRegisterController extends Controller
@@ -34,6 +35,22 @@ class UserRegisterController extends Controller
             'users' => $users
         ]);
     }
+
+    public function exportUsers($event) {
+        // $users = User::where('subqis', $event)->get();
+        $users = User::all();
+
+        $data = [];
+
+        foreach ($users as $user) {
+            unset($user['api_token']);
+            unset($user['created_at']);
+            unset($user['updated_at']);
+            $data[] = $user;
+        }
+        return (new FastExcel($data))->download('participants.xlsx');
+    }
+
     public function showRegister()
     {
         /*
