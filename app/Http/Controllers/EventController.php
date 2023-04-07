@@ -44,18 +44,19 @@ class EventController extends Controller
                 'event_date' => 'required|date',
             ]);
 
-            if ($validator->fails()) throw new Exception(json_encode($validator->errors()));
+            if ($validator->fails()) throw new Exception($validator->errors());
             $event = Event::find($uuid);
 
             if (!$event) throw new Exception('Event not found!');
             $event->event_name = $request->event_name;
             $event->company    = $request->company;
             $event->event_date = $request->event_date;
+            $event->save();
             logStore(UPDATE_EVENT, $event, STATUS_SUCCESS);
-            return back()->with('success', 'Event created successfully');
+            return back()->with('success', 'Event updated successfully');
         } catch (Exception $e) {
             logStore(UPDATE_EVENT, $e->getMessage(), STATUS_ERROR);
-            return back()->withInput()->with('error', 'Failed to store event');
+            return back()->withInput()->with('error', 'Failed to update event');
         }   
     }
 }

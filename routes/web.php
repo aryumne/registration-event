@@ -38,6 +38,8 @@ Route::prefix('admin')->group(function () {
         Route::get('/dashboard', [IndexController::class, 'dashboard'])->name('dashboard');
         Route::post('/users/download', [UserRegisterController::class, 'exportUsers'])->name('users.export');
         Route::get('/events', [EventController::class, 'index'])->name('events.index');
+        Route::post('/events', [EventController::class, 'store'])->name('events.store');
+        Route::patch('/events/{uuid}', [EventController::class, 'update'])->name('events.update');
         Route::get('/gates', [AuthorizationController::class, 'index'])->name('gates.index');
     });
     Route::get('/download', [UserRegisterController::class, 'download'])->name('download');
