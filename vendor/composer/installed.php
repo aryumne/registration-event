@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '2154b83081f1a955c62bd358a5bdd4abdd91c62f',
+        'reference' => 'cade33997c1270d6221b808c79732951dd945281',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -16,15 +16,6 @@
             'reference' => '73e5b88775c64ccc0b84fb60836b30dc9d92ac4a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../asm89/stack-cors',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'box/spout' => array(
-            'pretty_version' => 'v3.3.0',
-            'version' => '3.3.0.0',
-            'reference' => '9bdb027d312b732515b884a341c0ad70372c6295',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../box/spout',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -415,7 +406,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '2154b83081f1a955c62bd358a5bdd4abdd91c62f',
+            'reference' => 'cade33997c1270d6221b808c79732951dd945281',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -570,6 +561,15 @@
             'install_path' => __DIR__ . '/../nunomaduro/collision',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'openspout/openspout' => array(
+            'pretty_version' => 'v4.13.1',
+            'version' => '4.13.1.0',
+            'reference' => 'dd73318406b1fffdeaa333a32e175149d28224f7',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../openspout/openspout',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'opis/closure' => array(
             'pretty_version' => '3.6.3',
@@ -748,8 +748,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -804,9 +804,9 @@
             'dev_requirement' => false,
         ),
         'rap2hpoutre/fast-excel' => array(
-            'pretty_version' => 'v3.2.0',
-            'version' => '3.2.0.0',
-            'reference' => '28183f3a90179386bfadcd0083129c247ce49fbe',
+            'pretty_version' => 'v5.2.0',
+            'version' => '5.2.0.0',
+            'reference' => 'c6d2b8b707b85f7c43028d3b4cc969388d8b6c17',
             'type' => 'library',
             'install_path' => __DIR__ . '/../rap2hpoutre/fast-excel',
             'aliases' => array(),

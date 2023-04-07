@@ -15,7 +15,8 @@
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.2",
-        "rap2hpoutre/fast-excel": "^3.0",
+        "ramsey/uuid": "^4.7",
+        "rap2hpoutre/fast-excel": "^5.2",
         "therobfonz/laravel-mandrill-driver": "^3.1"
     },
     "require-dev": {
@@ -31,7 +32,11 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/Helpers.php",
+            "app/Constants.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

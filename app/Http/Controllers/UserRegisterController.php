@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Mail;
-use App\Models\User;
 use Exception;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Rap2hpoutre\FastExcel\Facades\FastExcel;
 
 class UserRegisterController extends Controller
 {
@@ -26,6 +28,39 @@ class UserRegisterController extends Controller
      *
      * @return mixed
      */
+
+    public function index()
+    {
+        $users = User::all();
+        return view('admin.pages.users', [
+            'users' => $users
+        ]);
+    }
+
+    public function exportUsers() {
+        return redirect()->route('download');
+    }
+
+    public function download() {
+        If(!Auth::check()) {
+            return redirect()->route('login');
+        }
+        $users = User::all();
+        if (Auth::user()->role->role_level == 2) {
+            $adminsEvent = Auth::user()->event->event_name;
+            $users = User::where('subqis', $adminsEvent)->get();
+        }
+        $data = [];
+
+        foreach ($users as $user) {
+            unset($user['api_token']);
+            unset($user['created_at']);
+            unset($user['updated_at']);
+            $data[] = $user;
+        }
+        return FastExcel::data($data)->download('users.xlsx');
+    }
+
     public function showRegister()
     {
         /*
@@ -54,12 +89,12 @@ class UserRegisterController extends Controller
                 'email' => 'required',
             ]);
 
-            if($validator->fails()) throw new Exception (json_encode($validator->errors()));
+            if ($validator->fails()) throw new Exception(json_encode($validator->errors()));
             $data = $request->all();
             $data['subqis'] = $url[0];
             $user = User::create($data);
 
-            if(!$user) throw new Exception ('Failed store user');
+            if (!$user) throw new Exception('Failed store user');
             // $email = $user->email;
             // $subject = "Email Confirmation";
 
@@ -73,7 +108,7 @@ class UserRegisterController extends Controller
             // });
             return redirect('/thankyou');
         } catch (Exception $e) {
-            Log::info('Error Registration: '.$e->getMessage());
+            Log::info('Error Registration: ' . $e->getMessage());
             return back()->withInput()->with('error', 'Failed to register');
         }
     }
