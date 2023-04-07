@@ -31,16 +31,16 @@ Route::prefix('admin')->group(function () {
     Route::get('/', [AccountController::class, 'login'])->name('login');
     Route::post('/', [AccountController::class, 'authenticate'])->name('accounts.login');
     Route::middleware(['auth', 'prevent-back-history'])->group(function () {
-        Route::get('/accounts', [AccountController::class, 'index'])->name('accounts.index');
-        Route::post('/register', [AccountController::class, 'storeAccount'])->name('accounts.store');
-        Route::post('/deactivate/{uuid}', [AccountController::class, 'deactivateAccount'])->name('accounts.deactivate');
+        Route::get('/accounts', [AccountController::class, 'index'])->name('accounts.index')->middleware('can:mng-accounts');
+        Route::post('/register', [AccountController::class, 'storeAccount'])->name('accounts.store')->middleware('can:create-account');
+        Route::post('/deactivate/{uuid}', [AccountController::class, 'deactivateAccount'])->name('accounts.deactivate')->middleware('can:edit-account');
         Route::post('/logout', [AccountController::class, 'destroy'])->name('accounts.destroy');
-        Route::get('/dashboard', [IndexController::class, 'dashboard'])->name('dashboard');
-        Route::post('/users/download', [UserRegisterController::class, 'exportUsers'])->name('users.export');
-        Route::get('/events', [EventController::class, 'index'])->name('events.index');
-        Route::post('/events', [EventController::class, 'store'])->name('events.store');
-        Route::patch('/events/{uuid}', [EventController::class, 'update'])->name('events.update');
-        Route::get('/gates', [AuthorizationController::class, 'index'])->name('gates.index');
+        Route::get('/dashboard', [IndexController::class, 'dashboard'])->name('dashboard')->middleware('can:mng-users');
+        Route::post('/users/download', [UserRegisterController::class, 'exportUsers'])->name('users.export')->middleware('can:mng-users');
+        Route::get('/events', [EventController::class, 'index'])->name('events.index')->middleware('can:mng-events');
+        Route::post('/events', [EventController::class, 'store'])->name('events.store')->middleware('can:create-event');
+        Route::patch('/events/{uuid}', [EventController::class, 'update'])->name('events.update')->middleware('can:edit-event');
+        Route::get('/gates', [AuthorizationController::class, 'index'])->name('gates.index')->middleware('can:mng-gates');;
     });
     Route::get('/download', [UserRegisterController::class, 'download'])->name('download');
 });

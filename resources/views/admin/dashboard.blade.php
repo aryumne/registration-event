@@ -12,6 +12,7 @@
     <link href="{{ asset('admin-assets/css/styles.css') }}" rel="stylesheet" />
     {{-- <link href="{{ asset('css/styles.css') }}" rel="stylesheet" /> --}}
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -32,8 +33,7 @@
                     <li>
                         <form action="{{ route('accounts.destroy') }}" method="POST">
                             @csrf
-                            <a class="dropdown-item"
-                                onclick="event.preventDefault();this.closest('form').submit();">
+                            <a class="dropdown-item" onclick="event.preventDefault();this.closest('form').submit();">
                                 logout
                             </a>
                         </form>
@@ -54,27 +54,29 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <div class="sb-sidenav-menu-heading">Manage</div>
-                        <a class="nav-link {{ request()->routeIs('events.*') ? 'active' : null }}"
-                            href="{{ route('events.index') }}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Events
-                        </a>
-                        <a class="nav-link {{ request()->routeIs('accounts.*') ? 'active' : null }}"
-                            href="{{ route('accounts.index') }}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Accounts
-                        </a>
-                        <a class="nav-link {{ request()->routeIs('gates.*') ? 'active' : null }}"
-                            href="{{ route('gates.index') }}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Roles & Permissions
-                        </a>
+                        @if (Auth::user()->role->role_level == 1)
+                            <div class="sb-sidenav-menu-heading">Manage</div>
+                            <a class="nav-link {{ request()->routeIs('events.*') ? 'active' : null }}"
+                                href="{{ route('events.index') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Events
+                            </a>
+                            <a class="nav-link {{ request()->routeIs('accounts.*') ? 'active' : null }}"
+                                href="{{ route('accounts.index') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Accounts
+                            </a>
+                            <a class="nav-link {{ request()->routeIs('gates.*') ? 'active' : null }}"
+                                href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Roles & Permissions
+                            </a>
+                        @endif
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    {{ Auth::user()->event ?? 'Super Admin' }}
+                    {{ Auth::user()->event == null ? 'Super Admin' : Auth::user()->event->event_name . "'s admin"  }}
                 </div>
             </nav>
         </div>

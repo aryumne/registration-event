@@ -3,13 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
-use Redirect;
-use View;
-use Illuminate\Support\Carbon;
-use Auth;
-use Validator;
+use Illuminate\Support\Facades\Auth;
 
 class IndexController extends Controller
 {
@@ -108,6 +103,11 @@ class IndexController extends Controller
 
     public function dashboard() {
         $users = User::all();
+
+        if (Auth::user()->role->role_level == 2) {
+            $adminsEvent = Auth::user()->event->event_name;
+            $users = User::where('subqis', $adminsEvent)->get();
+        }
         return view('admin.pages.index', [
             'users' => $users
         ]);

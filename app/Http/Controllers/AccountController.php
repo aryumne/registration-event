@@ -16,12 +16,19 @@ class AccountController extends Controller
 {
     public function index() {
         $accounts = Account::all();
+        $roles    = Role::all();
+        $events   = Event::all();
         return view('admin.pages.accounts', [
-            'accounts' => $accounts
+            'accounts' => $accounts,
+            'roles' => $roles,
+            'events' => $events
         ]);
     }
 
     public function login() {
+        if(Auth::check()) {
+            return redirect()->route('dashboard');
+        }
         return view('admin.login');
     }
 

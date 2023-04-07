@@ -24,8 +24,12 @@ class PermissionSeeder extends Seeder
 
             // Events
             [
-                'permission_sluk' => 'mng-event',
+                'permission_sluk' => 'mng-events',
                 'permission_name' => 'Manage Events'
+            ],
+            [
+                'permission_sluk' => 'create-event',
+                'permission_name' => 'Create Events'
             ],
             [
                 'permission_sluk' => 'edit-event',
@@ -34,8 +38,12 @@ class PermissionSeeder extends Seeder
 
             // Accounts
             [
-                'permission_sluk' => 'mng-account',
+                'permission_sluk' => 'mng-accounts',
                 'permission_name' => 'Manage Accounts'
+            ],
+            [
+                'permission_sluk' => 'create-account',
+                'permission_name' => 'Create Account'
             ],
             [
                 'permission_sluk' => 'edit-account',
@@ -48,7 +56,7 @@ class PermissionSeeder extends Seeder
 
             // Authorizeations
             [
-                'permission_sluk' => 'mng-authorize',
+                'permission_sluk' => 'mng-gates',
                 'permission_name' => 'Manage Autorizations'
             ],
         ];
