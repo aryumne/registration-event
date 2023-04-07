@@ -296,7 +296,7 @@
         </div>
     </section>
 
-    <section class="footer-area footer-dark pb-5">
+    <section class="footer-area footer-dark">
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center mb-lg-4">
                 <div class="col-md-6 col-12">

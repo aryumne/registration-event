@@ -8,8 +8,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Contracts\Auth\Guard;
-use Rap2hpoutre\FastExcel\FastExcel;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Rap2hpoutre\FastExcel\Facades\FastExcel;
 
 class UserRegisterController extends Controller
 {
@@ -36,10 +37,16 @@ class UserRegisterController extends Controller
         ]);
     }
 
-    public function exportUsers($event) {
-        // $users = User::where('subqis', $event)->get();
-        $users = User::all();
+    public function exportUsers() {
+        return redirect()->route('download');
+    }
 
+    public function download() {
+        $users = User::all();
+        if (Auth::user()->role->role_level == 2) {
+            $adminsEvent = Auth::user()->event->event_name;
+            $users = User::where('subqis', $adminsEvent)->get();
+        }
         $data = [];
 
         foreach ($users as $user) {
@@ -48,7 +55,7 @@ class UserRegisterController extends Controller
             unset($user['updated_at']);
             $data[] = $user;
         }
-        return (new FastExcel($data))->download('participants.xlsx');
+        return FastExcel::data($data)->download('users.xlsx');
     }
 
     public function showRegister()

@@ -7,8 +7,10 @@ use App\Models\Role;
 use App\Models\Event;
 use App\Models\Account;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Auth\AuthenticationException;
 
 class AccountController extends Controller
 {
@@ -19,12 +21,29 @@ class AccountController extends Controller
         ]);
     }
 
-    public function showLogin() {
+    public function login() {
         return view('admin.login');
     }
 
-    public function login() {
-        return view('admin.login');
+    public function authenticate(Request $request)
+    {
+
+        try {
+            $validator = Validator::make($request->all(), [
+                'username' => ['required'],
+                'password' => ['required'],
+            ]);
+            if ($validator->fails()) throw new AuthenticationException(json_encode($validator->errors()));
+    
+            if (Auth::attempt(['username' => $request->username, 'password' => $request->password, 'is_active' => 1])) {
+                $request->session()->regenerate();
+                return redirect()->route('dashboard');
+            }
+        } catch (AuthenticationException $e) {
+            logStore('Login', $e->getMessage(), STATUS_ERROR);
+            return back()->with(STATUS_ERROR, 'The provided credentials do not match our records.');
+        }
+
     }
 
     public function storeAccount(Request $request) {
@@ -74,7 +93,12 @@ class AccountController extends Controller
         }
     }
 
-    public function destroy() {
+    public function destroy(Request $request) {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
         return redirect('/admin');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Traits\Uuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Account extends Authenticatable
@@ -23,4 +24,12 @@ class Account extends Authenticatable
         'remember_me'
     ];
     protected $casts = ['id' => 'string'];
+
+    public function event() {
+        return $this->belongsTo(Event::class,'event_id', 'id');
+    }
+
+    public function role() {
+        return $this->belongsTo(Role::class,'role_id','id');
+    }
 }

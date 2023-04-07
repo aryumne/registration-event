@@ -27,23 +27,29 @@
                 <div class="col-lg-5">
                     <div class="card shadow-lg border-0 ">
                         <div class="card-header">
-                            <h5 class="text-center font-weight-light my-4">Sign in as administrator</h5>
+                            <h5 class="text-center font-weight-light my-3">Sign in as administrator</h5>
+                            @if (session('error'))
+                                <div class="alert alert-danger my-0" role="alert">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form method="POST" action="{{ route('accounts.login') }}">
+                                @csrf
                                 <div class="form-floating mb-4">
-                                    <input class="form-control" id="inputEmail" type="text"
-                                        placeholder="admineveny" />
-                                    <label for="inputEmail">Username</label>
+                                    <input class="form-control" id="inputUsername" type="text"
+                                        placeholder="admineveny" name="username" />
+                                    <label for="inputUsername">Username</label>
                                 </div>
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="inputPassword" type="password"
-                                        placeholder="Password" />
+                                        placeholder="Password" name="password" />
                                     <label for="inputPassword">Password</label>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between    mt-4 mb-0">
                                     <a class="small" href="password.html">Forgot Password?</a>
-                                    <a class="btn btn-primary" href="index.html">Login</a>
+                                    <button type="submit" class="btn btn-primary">Login</button>
                                 </div>
                             </form>
                         </div>

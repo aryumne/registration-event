@@ -107,6 +107,9 @@ class IndexController extends Controller
 
 
     public function dashboard() {
-        return view('admin.pages.index');
+        $users = User::all();
+        return view('admin.pages.index', [
+            'users' => $users
+        ]);
     }
 }

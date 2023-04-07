@@ -10,6 +10,7 @@
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="{{ asset('admin-assets/css/styles.css') }}" rel="stylesheet" />
+    {{-- <link href="{{ asset('css/styles.css') }}" rel="stylesheet" /> --}}
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -28,7 +29,16 @@
                     data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="{{ route('dashboard') }}">Settings</a></li>
-                    <li><a class="dropdown-item" href="{{ route('accounts.destroy') }}">Logout</a></li>
+                    <li>
+                        <form action="{{ route('accounts.destroy') }}" method="POST">
+                            @csrf
+                            <a class="dropdown-item"
+                                onclick="event.preventDefault();this.closest('form').submit();">
+                                logout
+                            </a>
+                        </form>
+                    </li>
+
                 </ul>
             </li>
         </ul>
@@ -38,25 +48,25 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading">Core</div>
-                        <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : null }}" href="{{ route('dashboard') }}">
+                        <div class="sb-sidenav-menu-heading">General</div>
+                        <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : null }}"
+                            href="{{ route('dashboard') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <a class="nav-link {{ request()->routeIs('users.*') ? 'active' : null }}" href="{{ route('users.index') }}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Participants
-                        </a>
                         <div class="sb-sidenav-menu-heading">Manage</div>
-                        <a class="nav-link {{ request()->routeIs('events.*') ? 'active' : null }}" href="{{ route('events.index') }}">
+                        <a class="nav-link {{ request()->routeIs('events.*') ? 'active' : null }}"
+                            href="{{ route('events.index') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Events
                         </a>
-                        <a class="nav-link {{ request()->routeIs('accounts.*') ? 'active' : null }}" href="{{ route('accounts.index') }}">
+                        <a class="nav-link {{ request()->routeIs('accounts.*') ? 'active' : null }}"
+                            href="{{ route('accounts.index') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Accounts
                         </a>
-                        <a class="nav-link {{ request()->routeIs('gates.*') ? 'active' : null }}" href="{{ route('gates.index') }}">
+                        <a class="nav-link {{ request()->routeIs('gates.*') ? 'active' : null }}"
+                            href="{{ route('gates.index') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Roles & Permissions
                         </a>
@@ -64,7 +74,7 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    Administrator
+                    {{ Auth::user()->event ?? 'Super Admin' }}
                 </div>
             </nav>
         </div>
