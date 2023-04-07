@@ -42,6 +42,9 @@ class UserRegisterController extends Controller
     }
 
     public function download() {
+        If(!Auth::check()) {
+            return redirect()->route('login');
+        }
         $users = User::all();
         if (Auth::user()->role->role_level == 2) {
             $adminsEvent = Auth::user()->event->event_name;
