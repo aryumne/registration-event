@@ -72,7 +72,7 @@
                         <a class="navbar-brand" href="/">
                             <img class="logo-nav-searce" src="assets/images/searce.png" alt="Logo">
                         </a>
-                        
+
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
                             <ul class="navbar-nav m-auto">
                                 <li class="nav-item"><a class="page-scroll" href="#home">About</a></li>
@@ -83,11 +83,12 @@
                         <div class="pr-lg-5 pb-lg-1">
                             <ul>
                                 <li>
-                                    <a id="reg-button" class="solid px-3 py-2" href="register">Register Here</a>
+                                    <a id="reg-button" class="solid px-3 py-2"
+                                        style="background-color: #0769FF; color:#fff;" href="register">Register Here</a>
                                 </li>
                             </ul>
                         </div>
-                        
+
                         <a class="navbar-brand" style="margin-right: 0 !important;" href="/">
                             <img class="logo-nav-gcloud" src="assets/images/gcloud.png" alt="Logo">
                         </a>
@@ -103,7 +104,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-area py-md-5 py-3" style="background-color: #7A7A7A;">
+    <section id="about" class="contact-area py-md-5 py-3" style="background-color: #7A7A7A;">
         <div class="container blur">
             <div class="row justify-content-center py-md-4 py-2">
                 <div class="col-lg-11 col-md-10">
@@ -125,8 +126,8 @@
                     <img src="assets/images/aivent-homepage.png" alt="Aivent" class="img-service">
                 </div>
                 <div class="col-9 d-flex align-items-center p-lg-5 p-md-3 p-sm-2">
-                    <p class="desc-service">
-                        <span style="color:#0769FF;" class="fws-bold">Aiven</span> provides managed open-source data
+                    <p class="desc-service" style="text-align:justify !important;">
+                        <strong style="color:#0769FF;" class="fws-bold">Aiven</strong> provides managed open-source data
                         infrastructure solutions, including PostgreSQL, MySQL, Redis, Elasticsearch, Kafka, and
                         Cassandra. Their use cases include e-commerce, gaming, and SaaS.
                     </p>
@@ -138,8 +139,8 @@
                     <img src="assets/images/fivetran-homepage.png" alt="Aivent" class="img-service">
                 </div>
                 <div class="col-9 d-flex align-items-center p-lg-5 p-md-3 p-sm-2">
-                    <p class="desc-service">
-                        <span style="color:#0769FF;" class="fws-bold">Fivetran</span> is a cloud-based data
+                    <p class="desc-service" style="text-align:justify !important;">
+                        <strong style="color:#0769FF;" class="fws-bold">Fivetran</strong> is a cloud-based data
                         integration platform that offers pre-built connectors for various data sources, including
                         databases, applications, and APIs. It integrates data into cloud data warehouses such as
                         BigQuery, Snowflake, and Redshift. Their use cases include marketing, finance, and analytics.
@@ -152,198 +153,150 @@
                     <img src="assets/images/jojonomics-homepage.png" alt="Aivent" class="img-service">
                 </div>
                 <div class="col-9 d-flex align-items-center p-lg-5 p-md-3 p-sm-2">
-                    <p class="desc-service">
-                        <span style="color:#0769FF;" class="fws-bold">Jojonomics</span> is a platform that provides
+                    <p class="desc-service" style="text-align:justify !important;">
+                        <strong style="color:#0769FF;" class="fws-bold">Jojonomics</strong> is a platform that
+                        provides
                         complete HR, productivity, sales, finance, operation and data intelligence applications. You can
                         customize your applications according to your company's needs and manage your business in
                         real-time from anywhere.
                     </p>
                 </div>
             </div> <!-- row -->
-
-            <div style="margin-top: 4rem;">
-                <a id="reg-button" class="btn btn-primary btn-lg btn-block" href="register">Register Here</a>
-            </div>
         </div> <!-- container -->
     </section>
 
-    <section id="agenda" class="contact-area py-md-5 py-3" style="background-color: #F4F6F7;">
-        <div class="container py-5 py-3">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-10">
-                    <div class="section-title text-center pb-30 pt-0">
-                        <h3 class="title">Agenda</h3>
-                    </div>
+    <section class="contact-area py-md-5 py-3" style="background-color: #000;">
+        <div class="container blur">
+            <div class="row justify-content-center py-md-4 py-2">
+                <div class="col-lg-11 col-md-10">
+                    <div class="section-title py-md-4 py-0">
+                        <p class="join-us">Our keynote speakers will provide practical advice on implementing cloud
+                            computing technologies and optimizing your infrastructure for maximum performance. You'll
+                            have hands-on experience with the latest tools and services, and learn how to manage your
+                            cloud environment efficiently.</p>
+                    </div> <!-- section title -->
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="accordion" id="accordionExample">
-                        <!-- <div class="card">
-                            <div class="card-header" id="headingOne" style="background-color: #4374B6;">
-                                <h5 class="mb-0">
-                                    <h3 id="head-title-agenda" class="title">
-                                        Hari ke-1
-                                        <br>
-                                        MSME UPDATE 2021
-                                    </h3>
-                                    <p style="margin-top: 0.5rem;" id="content-text-agenda-1">
-                                        Kamis, 26 Agustus 2021 | 10.00 – 11.30
-                                    </p>
-                                    <p id="content-text-agenda-2"> Khusus untuk Undangan*
-                                        <button id="btn-collapse-agenda" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            see schedule
-                                        </button>
-                                    </p>
-                                </h5>
-                            </div>
-
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <table id="agenda-table" class="table table-borderless">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">DIGITALISASI UMKM INDONESIA UNTUK BERTAHAN DAN MENINGKATKAN PEREKONOMIAN NASIONAL</b>
-                                                    <br>
-                                                    Erick Thohir – Menteri BUMN
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">
-                                                        PEMAPARAN HASIL RISET BLIBLI:
-                                                        <br>
-                                                        REKOMENDASI PENGEMBANGAN UMKM UNTUK PARA STAKEHOLDER
-                                                    </b>
-                                                    <br>
-                                                    BE Satrio – Litbang Kompas
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">
-                                                        PEMAPARAN HASIL RISET BLIBLI:
-                                                        <br>
-                                                        KONTRIBUSI BLIBLI TERHADAP PENGEMBANGAN UMKM DI INDONESIA
-                                                    </b>
-                                                    <br>
-                                                    Haikal Siregar – Boston Consulting Group Indonesia
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <b style="color: #000;">
-                                                        INISIATIF BLIBLI UNTUK PENGEMBANGAN UMKM DI INDONESIA
-                                                    </b>
-                                                    <br>
-                                                    Kusumo Martanto – CEO & Co-Founder Blibli
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="card">
-                            <div class="card-header" id="headingTwo" style="background-color: #4374B6;">
-                                <h5 class="mb-0">
-                                    <h3 id="head-title-agenda" class="title text-uppercase">
-                                        Title Event
-                                    </h3>
-                                    <p id="content-text-agenda-1" style="margin-top: 0.5rem;">
-                                        Date Event
-                                    </p>
-                                    <p id="content-text-agenda-2"> Invite Only*
-                                        <button id="btn-collapse-agenda" class="btn btn-link collapsed"
-                                            type="button" data-toggle="collapse" data-target="#collapseTwo"
-                                            aria-expanded="true" aria-controls="collapseTwo">
-                                            see schedule
-                                        </button>
-                                    </p>
-                                </h5>
-                            </div>
-
-                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <table id="agenda-table" class="table table-borderless">
-                                        <tbody>
-                                            @foreach ($agendas as $event)
-                                                <tr>
-                                                    <td>
-                                                        <b style="color: #000;">{{ $event['title'] }}</b>
-                                                        <br>
-                                                        <p class='text-table'>{{ $event['time'] }}</p>
-                                                        {{ $event['speaker'] }}
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-top: 2rem;">
-                        <a id="reg-button" class="btn btn-primary btn-lg btn-block" href="register">Register Here</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
     </section>
-
-    <section id="speakers"
-        style="background:url('assets/images/section-speaker.png') no-repeat;background-size: cover;"
-        class="portfolio-area portfolio-four">
+    <section id="speakers" class="portfolio-area portfolio-four">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-5">
                 <div class="col-lg-6 col-md-10">
                     <div class="section-title text-center">
-                        <h3 style="color: #fff;" class="title">Speakers Information</h3>
+                        <h3 style="color: #0769FF;" class="title">FEATURED SPEAKERS</h3>
                     </div>
                 </div>
             </div>
+            <div class="row d-flex justify-content-lg-between justify-content-center">
+                <div class="col-lg-2 col-md-4 col-6 text-center p-3">
+                    <img src="{{ asset('assets/images/speakers/benedikta.png') }}" alt="Benedikta">
+                    <h5 class="mt-3">Benedikta Satya</h5>
+                    <p class="pt-1 px-2" style="line-height:18px;">Country Director Searce</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center p-3">
+                    <img src="{{ asset('assets/images/speakers/felicity.png') }}" alt="Felicity">
+                    <h5 class="mt-3">Felicity Burrows</h5>
+                    <p class="pt-1 px-2" style="line-height:18px;">Alliance Manager Fivetran</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center p-3">
+                    <img src="{{ asset('assets/images/speakers/heryudi.png') }}" alt="Heryudi Ganesha">
+                    <h5 class="mt-3">Heryudi Ganesha</h5>
+                    <p class="pt-1 px-2" style="line-height:18px;">VP of IT Operations and infrastructure Jojonomic
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center p-3">
+                    <img src="{{ asset('assets/images/speakers/budi.png') }}" alt="Budi Kusuma Utama">
+                    <h5 class="mt-3 p-0" style="font-size: 17px;">Budi Kusuma Utama</h5>
+                    <p class="pt-1 px-2" style="line-height:18px;">Senior Solution Architect Aiven</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center p-3">
+                    <img src="{{ asset('assets/images/speakers/beny.png') }}" alt="Beny Ibrani">
+                    <h5 class="mt-3">Beny Ibrani</h5>
+                    <p class="pt-1 px-2" style="line-height:18px;">Cloud Solution Architect Intel</p>
+                </div>
+            </div>
+        </div>
+        <div class="my-5">
             <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="row grid gap-6 mt-35" style="position: relative; height: 824.952px;">
-                        @foreach (array_chunk($speakers, ceil(count($speakers)/2)) as $speaker)
-                            <div class="col-12">
-                                <div class="row justify-content-center">
-                                    @foreach ($speaker as $sp)
-                                        <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
-                                            <div class="single-portfolio">
-                                                <div class="portfolio-image">
-                                                    <img src="assets/images/speakers/{{ $sp['filename'] }}?v=.date(YmdHis)"
-                                                        alt="{{ $sp['name'] }}" style="height:300px;object-fit:cover;">
-                                                    <div
-                                                        class="portfolio-overlay d-flex align-items-center justify-content-center">
-                                                        <div class="portfolio-content">
-                                                            <h3 class="title">{{ $sp['name'] }}</h3>
-                                                            <p class="text">{{ $sp['job'] }}</p>
-                                                            </br>
-                                                            <p class="text">
-                                                                {{ strlen($sp['bio']) > 120 ? $sp['bio'] = substr($sp['bio'], 0, 120) . '...' : $sp['bio']; }}
-                                                            </p>
-                                                            {{-- <a style="cursor: pointer; font-size: 19px;"
-                                                                id="speaker-{{ $loop->iteration }}" role="button" tabindex="0">See
-                                                                more</a> --}}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <button type="button" class="btn btn-lg p-2 px-4 text-lg"
+                        style="border-radius: 25px; font-size: 1.6rem; background-color: #0769FF; color:#fff">Key
+                        takeaways include:</button>
+                </div>
+            </div>
+            <div class="row" style="background-color: #0769FF; height:0.6rem; margin-top: -30px;"></div>
+        </div>
+        <div class="container mt-5">
+            <div class="row justify-content-center pt-4">
+                <div class="col-12 p-3 pl-5">
+                    <ul style="list-style-type: disc;" role="list">
+                        <li class="py-2" data-icon="😎">
+                            <p class="text-list">Understanding the latest trends and innovations in cloud computing</p>
+                        </li>
+                        <li class="py-2">
+                            <p class="text-list">Best practices for implementing cloud computing technologies</p>
+                        </li>
+                        <li class="py-2">
+                            <p class="text-list">Strategies for leveraging the latest tools and services to achieve
+                                your business objectives</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="footer-area footer-dark py-5">
+    <section id="agenda" class="contact-area py-3" style="background-color: #7A7A7A;">
+        <div class="container py-5 py-3">
+            <div class="row px-2">
+                <div class="col-12 my-2 bg-white p-0">
+                    <table class="table table-striped table-bordered mb-0">
+                        <thead style="background-color: #0769FF; color:#fff;">
+                            <th class="text-center">Time</th>
+                            <th class="text-center">Agenda</th>
+                        </thead>
+                        <tbody>
+                            @foreach ($agendas as $event)
+                                <tr>
+                                    <td>
+                                        <p class='text-center'>{{ $event['time'] }}</p>
+                                    </td>
+                                    <td>
+                                        <b style="color: #000;">{{ $event['title'] }}</b>
+                                        <br>
+                                        {{ $event['speaker'] }}
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="agenda-area py-3">
+        <div class="container py-5 py-3">
+            <div class="row px-2">
+                <div class="col-12 my-2 p-0 text-center">
+                    <p class="join-us text-center" style="color:#000;">
+                        Join us on <strong style="color: #0769FF;">25 May 2023 </strong> at <strong style="color: #0769FF;">Lotus Room, Shangri La Hotel, Jakarta</strong> to network with industry leaders and learn how cloud computing can transform your business.
+                    </p>
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col-8" style="border-left:4px solid #000;">
+                    <h4 class="pb-2">For any enquiries please contact:</h4>
+                    <p class="desc-service">Susi (0858 9059 7668) or <br> email to searce@event.co.id</p>
+                </div>
+                <div class="col-4 px-md-5 d-flex align-items-center">
+                    <a id="reg-button" class="btn btn-lg btn-block rounded-0 px-2" style="background-color: #0769FF; color:#fff" href="register">Register Here</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-area footer-dark pb-5">
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center mb-lg-4">
                 <div class="col-md-6 col-12">

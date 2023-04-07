@@ -32,36 +32,36 @@ class IndexController extends Controller
             [
                 'title' => 'Welcome Remarks',
                 'time'  => '09.30 AM - 09.40 AM',
-                'speaker'   => 'Benedikta Satya | Country Director | Searce',
+                'speaker'   => 'Benedikta Satya, Country Director, Searce',
             ],
             [
                 'title' => 'Accelerate Data Movement into Google Cloud with Fivetran',
                 'time'  => '09.40 AM - 10.10 AM',
-                'speaker'   => 'Felicity Burrows | Alliance Manager | Fivetran',
+                'speaker'   => 'Felicity Burrows, Alliance Manager, Fivetran',
             ],
             [
                 'title' => 'Agile Development with Officeless No Code Platform',
                 'time'  => '10.10 AM - 10.40 AM',
-                'speaker'   => 'Heryudi Ganesha | VP of IT Operations and Infrastructure | Jojonomic',
+                'speaker'   => 'Heryudi Ganesha, VP of IT Operations and Infrastructure, Jojonomic',
             ],
             [
                 'title' => 'Set up Complicated Architecture with Aiven in minutes',
                 'time'  => '10.40 AM - 11.10 AM',
-                'speaker'   => 'Budi Kusuma Utama | Senior Solution Architect | Aiven',
+                'speaker'   => 'Budi Kusuma Utama, Senior Solution Architect, Aiven',
             ],
             [
                 'title' => 'Build the optimized cloud infrastructure with Intel',
-                'time'  => '11.10 AM - 11.30 AM',
-                'speaker'   => 'Beny Ibrani | Cloud Solution Architect | Intel',
+                'time'  => '11.10 AM - 11.40 AM',
+                'speaker'   => 'Beny Ibrani, Cloud Solution Architect, Intel',
             ],
-            [
-                'title' => 'Topic 4',
-                'time'  => '11.30 AM - 12.00 PM',
-                'speaker'   => 'Maron* - Google',
-            ],
+            // [
+            //     'title' => 'Topic 4',
+            //     'time'  => '11.30 AM - 12.00 PM',
+            //     'speaker'   => 'Maron* - Google',
+            // ],
             [
                 'title' => 'Lunch',
-                'time'  => '12.30 PM - 1.30 PM',
+                'time'  => '11.40 AM - 1.00 PM',
                 'speaker'   => '',
             ],
         ];
