@@ -11,6 +11,10 @@ class Event extends Model
     use HasFactory, Uuid;
     protected $table    = 'events';
     protected $primaryKey = 'id';
-    protected $fillable = ['event_name'];
+    protected $fillable = [
+        'event_name',
+        'company',
+        'event_date'
+    ];
     protected $casts = ['id' => 'string'];
 }

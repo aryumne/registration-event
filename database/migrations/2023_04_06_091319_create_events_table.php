@@ -16,6 +16,8 @@ class CreateEventsTable extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('event_name');
+            $table->string('company');
+            $table->date('event_date');
             $table->softDeletes();
             $table->timestamps();
         });
