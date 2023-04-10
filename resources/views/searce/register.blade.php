@@ -43,12 +43,12 @@
     <link rel="stylesheet" href="assets/css/default.css">
 
     <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css?v=.date(YmdHisi)">
-
+    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=.date(YmdHisi)">
-
+    
     <link href="assets/blibli/index.css?v=.date(YmdHis)" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="assets/css/style.css?v=.date(YmdHisiu)">
     <script type="text/javascript" async="" src="assets/blibli/index.js"></script>
 </head>
 
@@ -202,9 +202,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-12">
-                    <div class="row p-3 d-flex justify-content-center">
-                        <img src="assets/images/intel-footer.png" alt="Intel">
+               <div class="col-md-2 col-12">
+                    <div class="row pt-3 justify-content-end intel-large">
+                        <img src="assets/images/intel-footer.png" alt="Intel" height="40">
+                    </div>
+                    <div class="row pt-3 pr-3 justify-content-end intel-sm">
+                        <div class="col-3">
+                            <img src="assets/images/intel-footer.png" alt="Intel">
+                        </div>
                     </div>
                 </div>
             </div> <!-- row -->

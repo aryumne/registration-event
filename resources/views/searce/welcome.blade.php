@@ -284,13 +284,15 @@
                     </p>
                 </div>
             </div>
-            <div class="row pt-5">
+            <div class="row pt-5 pl-2 pr-md-0 pr-2">
                 <div class="col-8" style="border-left:4px solid #000;">
                     <h4 class="pb-2">For any enquiries please contact:</h4>
                     <p class="desc-service">Susi (0858 9059 7668) or <br> email to searce@event.co.id</p>
                 </div>
-                <div class="col-4 px-md-5 d-flex align-items-center">
-                    <a id="reg-button" class="btn btn-lg btn-block rounded-0 px-2" style="background-color: #0769FF; color:#fff" href="register">Register Here</a>
+                <div class="col-4 d-flex align-items-center justify-content-end">
+                    <div class="row">
+                        <a id="reg-button" class="btn btn-lg btn-block rounded-0 px-2" style="background-color: #0769FF; color:#fff" href="register">Register Here</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -300,7 +302,7 @@
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center mb-lg-4">
                 <div class="col-md-6 col-12">
-                    <div class="row p-3">
+                    <div class="row pb-md-3 pb-0 pl-3">
                         <strong>Supported by</strong>
                     </div>
                     <div class="row">
@@ -317,8 +319,13 @@
                     </div>
                 </div>
                 <div class="col-md-2 col-12">
-                    <div class="row pt-3 d-flex justify-content-center">
-                        <img src="assets/images/intel-footer.png" alt="Intel">
+                    <div class="row pt-3 justify-content-end intel-large">
+                        <img src="assets/images/intel-footer.png" alt="Intel" height="40">
+                    </div>
+                    <div class="row pt-3 pr-3 justify-content-end intel-sm">
+                        <div class="col-3">
+                            <img src="assets/images/intel-footer.png" alt="Intel">
+                        </div>
                     </div>
                 </div>
             </div> <!-- row -->

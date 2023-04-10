@@ -53,16 +53,15 @@
     <link rel="stylesheet" href="assets/css/default.css">
 
     <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css?v=.date(YmdHisi)">
-
+    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=.date(YmdHisi)">
 
     <link href="assets/blibli/index.css?v=.date(YmdHis)" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="assets/css/style.css?v=.date(YmdHisi)">
     <script type="text/javascript" async="" src="assets/blibli/index.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
@@ -91,9 +90,9 @@
                 </h5>
             </div>
     </section>
-    <section class="footer-area footer-dark py-5">
+    <section class="footer-area footer-dark py-2">
         <div class="container">
-            <div class="row d-flex justify-content-between align-items-center mb-lg-4">
+            <div class="row d-flex justify-content-between align-items-center mb-lg-2">
                 <div class="col-md-6 col-12">
                     <div class="row p-3">
                         <strong>Supported by</strong>
@@ -111,9 +110,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-12">
-                    <div class="row p-3 d-flex justify-content-center">
-                        <img src="assets/images/intel-footer.png" alt="Intel">
+                 <div class="col-md-2 col-12">
+                    <div class="row pt-3 justify-content-end intel-large">
+                        <img src="assets/images/intel-footer.png" alt="Intel" height="40">
+                    </div>
+                    <div class="row pt-3 pr-3 justify-content-end intel-sm">
+                        <div class="col-3">
+                            <img src="assets/images/intel-footer.png" alt="Intel">
+                        </div>
                     </div>
                 </div>
             </div> <!-- row -->
