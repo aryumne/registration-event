@@ -44,6 +44,7 @@
 
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css?v=.date(YmdHisiu)">
+    <link rel="stylesheet" href="{{ asset('css/popup.css') }}">
 </head>
 
 <body>
@@ -127,7 +128,8 @@
                 </div>
                 <div class="col-9 d-flex align-items-center p-lg-5 p-md-3 p-sm-2">
                     <p class="desc-service" style="text-align:justify !important;">
-                        <strong style="color:#0769FF;" class="fws-bold">Aiven</strong> provides managed open-source data
+                        <strong style="color:#0769FF;" class="fws-bold">Aiven</strong> provides managed open-source
+                        data
                         infrastructure solutions, including PostgreSQL, MySQL, Redis, Elasticsearch, Kafka, and
                         Cassandra. Their use cases include e-commerce, gaming, and SaaS.
                     </p>
@@ -189,34 +191,32 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-lg-between justify-content-center">
-                <div class="col-lg-2 col-md-4 col-6 text-center p-3">
-                    <img src="{{ asset('assets/images/speakers/benedikta.png') }}" alt="Benedikta">
-                    <h5 class="mt-3">Benedikta Satya</h5>
-                    <p class="pt-1 px-2" style="line-height:18px;">Country Director Searce</p>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center p-3">
-                    <img src="{{ asset('assets/images/speakers/felicity.png') }}" alt="Felicity">
-                    <h5 class="mt-3">Felicity Burrows</h5>
-                    <p class="pt-1 px-2" style="line-height:18px;">Alliance Manager Fivetran</p>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center p-3">
-                    <img src="{{ asset('assets/images/speakers/heryudi.png') }}" alt="Heryudi Ganesha">
-                    <h5 class="mt-3">Heryudi Ganesha</h5>
-                    <p class="pt-1 px-2" style="line-height:18px;">VP of IT Operations and infrastructure Jojonomic
-                    </p>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center p-3">
-                    <img src="{{ asset('assets/images/speakers/budi.png') }}" alt="Budi Kusuma Utama">
-                    <h5 class="mt-3 p-0" style="font-size: 17px;">Budi Kusuma Utama</h5>
-                    <p class="pt-1 px-2" style="line-height:18px;">Senior Solution Architect Aiven</p>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center p-3">
-                    <img src="{{ asset('assets/images/speakers/beny.png') }}" alt="Beny Ibrani">
-                    <h5 class="mt-3">Beny Ibrani</h5>
-                    <p class="pt-1 px-2" style="line-height:18px;">Cloud Solution Architect Intel</p>
-                </div>
+                @foreach ($speakers as $speaker)
+                    <div class="col-lg-2 col-md-4 col-6 text-center p-3">
+                        <a href="#{{ $speaker['id'] }}" class="open-popup-link">
+                            <img src="{{ asset('assets/images/speakers/' . $speaker['filename']) }}" alt="Benedikta">
+                            <h5 class="mt-3">{{ $speaker['name'] }}</h5>
+                            <p class="pt-1 px-2" style="line-height:18px;">{{ $speaker['job'] }}</p>
+                        </a>
+                    </div>
+                    <div id="{{ $speaker['id'] }}" class="white-popup mfp-with-anim mfp-hide">
+                        <div class="row justify-content-center">
+                            <div class="col-12 d-flex justify-content-center">
+                                <img src="{{ asset('assets/images/speakers/'. $speaker['filename']) }}" alt="Heryudi Ganesha"
+                                    height="200px">
+                            </div>
+                            <div class="col-12 text-center">
+                                <h3 class="mt-4 mb-1 text-center">{{ $speaker['name'] }}</h3>
+                                <p class="pt-1 px-2 mb-4 text-secondary" style="line-height:18px;">{{ $speaker['job'] }}</p>
+                                <p class="text-justify">{!! $speaker['bio'] !!}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
+        {{-- END DETAIL OF SPEAKERS --}}
+
         <div class="my-5">
             <div class="row">
                 <div class="col-12 d-flex align-items-center justify-content-center">
@@ -280,7 +280,9 @@
             <div class="row px-2">
                 <div class="col-12 my-2 p-0 text-center">
                     <p class="join-us text-center" style="color:#000;">
-                        Join us on <strong style="color: #0769FF;">25 May 2023 </strong> at <strong style="color: #0769FF;">Lotus Room, Shangri La Hotel, Jakarta</strong> to network with industry leaders and learn how cloud computing can transform your business.
+                        Join us on <strong style="color: #0769FF;">25 May 2023 </strong> at <strong
+                            style="color: #0769FF;">Lotus Room, Shangri La Hotel, Jakarta</strong> to network with
+                        industry leaders and learn how cloud computing can transform your business.
                     </p>
                 </div>
             </div>
@@ -291,7 +293,8 @@
                 </div>
                 <div class="col-4 d-flex align-items-center justify-content-end">
                     <div class="row">
-                        <a id="reg-button" class="btn btn-lg btn-block rounded-0 px-2" style="background-color: #0769FF; color:#fff" href="register">Register Here</a>
+                        <a id="reg-button" class="btn btn-lg btn-block rounded-0 px-2"
+                            style="background-color: #0769FF; color:#fff" href="register">Register Here</a>
                     </div>
                 </div>
             </div>
@@ -347,6 +350,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
+
     <script>
         let img_responsive = (x) => {
             let banner = document.getElementById('banner');
@@ -388,81 +392,6 @@
         });
     </script>
 
-    <script>
-        var data = {
-            !!$login!!
-        };
-
-        $(document).ready(function() {
-            document.getElementById('contact').scrollIntoView();
-
-            if (data != 1) {
-                $('#modal-login').modal({
-                    show: true,
-                    focus: false
-                })
-            }
-
-            $('.close').click(function() {
-                $('.modal-body').empty()
-            })
-
-            $('#modal').on('hidden.bs.modal', function(event) {
-                $('.modal-body').empty()
-            })
-
-            $('#speaker-1').click(function() {
-                $('.modal-body').append(
-                    '<img src="assets/images/speakers/wisnu-wijaya-putra.jpg?v=.date(YmdHis)" alt=""><div style="padding-top: 1rem;" class="portfolio-overlay d-flex align-items-center justify-content-center"><div class="portfolio-content"><h3 class="title">Wisnu Wijaya Putra</h3><h4 style="font-weight: normal;" class="title">Assistant Vice President of Sales B2B</h4></br><p class="text" style="font-size: 14px;">Graduated from Trisakti University majoring Industrial Engineering.</p></br><p class="text" style="font-size: 14px;">He is enthusiast on negotiation, B2B, and sales with more than 10 years’ experience on B2B.</p></br><p class="text" style="font-size: 14px;">Now he is in charge as Head of Product & Procurement B2B / B2G in Blibli.</p></br><p class="text" style="font-size: 14px;">He believes Blibli B2B will be no 1 B2B platform and bring transparent and seamless corporate procurement incoming years.</p></br></div></div>'
-                );
-                $('#modal').modal({
-                    show: true,
-                    focus: false,
-                    keyboard: false
-                })
-            });
-
-            $('#speaker-2').click(function() {
-                $('.modal-body').append(
-                    '<img src="assets/images/speakers/andreas-ardian-pramaditya.jpg?v=.date(YmdHis)" alt=""> <div style="padding-top: 1rem;" class="portfolio-overlay d-flex align-items-center justify-content-center"> <div class="portfolio-content"> <h3 class="title">Andreas Ardian Pramaditya</h3> <h4 style="font-weight: normal;" class="title">Vice President of Galeri Indonesia</h4> <br> <p class="text" style="font-size: 14px;">Currently being a Vice president of Galeri Indonesia, focusing on managing and maximize profit SME\'s in Blibli.com</p> <br> <p class="text" style="font-size: 14px;">also strategize all collaboration with the government to create an SME development program until led Blibli to get an award</p> <br> <p class="text" style="font-size: 14px;">from Bank Indonesia Award 2018 as the most active digital platform for managing their SME\'s.</p> <br> </div> </div>'
-                );
-                $('#modal').modal({
-                    show: true,
-                    focus: false
-                })
-            });
-
-            $('#speaker-3').click(function() {
-                $('.modal-body').append(
-                    '<img src="assets/images/speakers/azzizah-purwitasari.jpg?v=.date(YmdHis)" alt=""> <div style="padding-top: 1rem;" class="portfolio-overlay d-flex align-items-center justify-content-center"> <div class="portfolio-content"> <h3 class="title">Azizah Purwitasari</h3> <h4 style="font-weight: normal;" class="title">Vice President of Return Management</h4> <br> <p class="text" style="font-size: 14px;">With over 9 years of value chain practice, Azizah has operated most of critical value chain functions: inventory, logistics, and customer service.</p> <br> <p class="text" style="font-size: 14px;">Through these experiences, she\'s build out capabilities on an important part of the ecommerce value chain, the returns service.</p> <br> <p class="text" style="font-size: 14px;">She launched industry leading capabilities to create hassle free return experience who make Blibli have significant competitive advantages compare to others.</p> <br> <p class="text" style="font-size: 14px;">Azizah is responsible for leading the strategy, growth, financial aspect, operations, and risk management of Return Management.</p> <br> <p class="text" style="font-size: 14px;">This role combines her as a reverse logistic, quality assurance, inventory control and asset recovery, return and dispute resolution, and claim management expertise.</p> <br> </div> </div>'
-                );
-                $('#modal').modal({
-                    show: true,
-                    focus: false
-                })
-            });
-
-            $('#speaker-4').click(function() {
-                $('.modal-body').append(
-                    '<img src="assets/images/speakers/christian-ng.jpg?v=.date(YmdHis)" alt=""> <div style="padding-top: 1rem;" class="portfolio-overlay d-flex align-items-center justify-content-center"> <div class="portfolio-content"> <h3 class="title">Christian Ng</h3> <h4 style="font-weight: normal;" class="title">Vice President of Handphone Category</h4> <br> <p class="text" style="font-size: 14px;">Christian Ng as a Vice President of Handphone, Tablet and Accessories Category with 7 years experience in Blibli.</p> <br> <p class="text" style="font-size: 14px;">He focused on building relationships with brands and seller partners, while developing business growth and increasing sales both in retail and marketplace in the Handphone, Tablet and Accessories Category.</p> <br> <p class="text" style="font-size: 14px;">In the same time, develop Trade-In Centre and O2O (Click n Collect) Solutions for Seller Partners.</p> <br> </div> </div>'
-                );
-                $('#modal').modal({
-                    show: true,
-                    focus: false
-                })
-            });
-            $('#speaker-5').click(function() {
-                $('.modal-body').append(
-                    '<img src="assets/images/speakers/yohanes-elniko-dimas.jpg?v=.date(YmdHis)" alt=""> <div style="padding-top: 1rem;" class="portfolio-overlay d-flex align-items-center justify-content-center"> <div class="portfolio-content"> <h3 class="title">Christian Ng</h3> <h4 style="font-weight: normal;" class="title">Vice President of Handphone Category</h4> <br> <p class="text" style="font-size: 14px;">Christian Ng as a Vice President of Handphone, Tablet and Accessories Category with 7 years experience in Blibli.</p> <br> <p class="text" style="font-size: 14px;">He focused on building relationships with brands and seller partners, while developing business growth and increasing sales both in retail and marketplace in the Handphone, Tablet and Accessories Category.</p> <br> <p class="text" style="font-size: 14px;">In the same time, develop Trade-In Centre and O2O (Click n Collect) Solutions for Seller Partners.</p> <br> </div> </div>'
-                );
-                $('#modal').modal({
-                    show: true,
-                    focus: false
-                })
-            });
-        });
-    </script>
-
     <!--====== Bootstrap js ======-->
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -487,22 +416,15 @@
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
 
-    <!-- <script type="text/javascript" id="zsiqchat">
-        var $zoho = $zoho || {};
-        $zoho.salesiq = $zoho.salesiq || {
-            widgetcode: "8ec571dae4f7f70cc323cddc5e23ff89a67d9297bdf3ecd8eef9ddd36ffd02e14700999c094ab2c0f9ef9a3dd080d988",
-            values: {},
-            ready: function() {}
-        };
-        var d = document;
-        s = d.createElement("script");
-        s.type = "text/javascript";
-        s.id = "zsiqscript";
-        s.defer = true;
-        s.src = "https://salesiq.zoho.com/widget";
-        t = d.getElementsByTagName("script")[0];
-        t.parentNode.insertBefore(s, t);
-    </script> -->
+    <script>
+        $('.open-popup-link').magnificPopup({
+            type: 'inline',
+            midClick: true,
+            removalDelay: 500,
+            mainClass: 'mfp-zoom-in'
+        });
+    </script>
+
 </body>
 
 </html>
