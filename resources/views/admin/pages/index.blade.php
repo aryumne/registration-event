@@ -54,7 +54,13 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->phone }}</td>
                             <td>{{ $user->subqis }}</td>
-                            <td>System Architect</td>
+                            <td>
+                                <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger mb-3" type="submit">delete</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

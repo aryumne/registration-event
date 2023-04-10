@@ -38,6 +38,7 @@ Route::prefix('admin')->group(function () {
         Route::post('/logout', [AccountController::class, 'destroy'])->name('accounts.destroy');
         Route::get('/dashboard', [IndexController::class, 'dashboard'])->name('dashboard')->middleware('can:mng-users');
         Route::post('/users/download', [UserRegisterController::class, 'exportUsers'])->name('users.export')->middleware('can:mng-users');
+        Route::delete('/users/{uuid}', [UserRegisterController::class, 'destroy'])->name('users.destroy')->middleware('can:mng-users');
         Route::get('/events', [EventController::class, 'index'])->name('events.index')->middleware('can:mng-events');
         Route::post('/events', [EventController::class, 'store'])->name('events.store')->middleware('can:create-event');
         Route::patch('/events/{uuid}', [EventController::class, 'update'])->name('events.update')->middleware('can:edit-event');

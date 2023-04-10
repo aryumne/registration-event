@@ -92,24 +92,32 @@ class UserRegisterController extends Controller
             if ($validator->fails()) throw new Exception(json_encode($validator->errors()));
             $data = $request->all();
             $data['subqis'] = $url[0];
+            $checkExisting = User::where('email', $data['email'])->where('subqis', $data['subqis'])->first();
+            if($checkExisting) {
+                logStore(REGISTER_USER, 'Email has already registered in this event', STATUS_ERROR);
+                return back()->withInput()->with('error', 'Email has already registered in this event');
+            }
+            
             $user = User::create($data);
-
             if (!$user) throw new Exception('Failed store user');
-            // $email = $user->email;
-            // $subject = "Email Confirmation";
-
-            // Mail::send('Public.Send', ['name' => $user->first_name], function ($message) use ($email, $subject) {
-
-            //     $message->subject($subject);
-
-            //     $message->from('donotreply@bliblipartnergathering2021.com', 'bliblipartnergathering2021');
-
-            //     $message->to($email);
-            // });
+            logStore(REGISTER_USER, $user, STATUS_SUCCESS);
             return redirect('/thankyou');
         } catch (Exception $e) {
-            Log::info('Error Registration: ' . $e->getMessage());
-            return back()->withInput()->with('error', 'Failed to register');
+            logStore(REGISTER_USER, $e->getMessage(), STATUS_ERROR);
+            return back()->withInput()->with('error', 'Registration Failed');
+        }
+    }
+
+    public function destroy($uuid) {
+        try {
+            $user = User::find($uuid);
+            if (!$user) throw new Exception('User not found');
+            logStore(DELETE_USER, $user, STATUS_SUCCESS);
+            $user->delete();
+            return back()->with('success', 'Successfully deleted');
+        } catch (Exception $e) {
+            logStore(DELETE_USER, $e->getMessage(), STATUS_ERROR);
+            return back()->withInput()->with('error', 'Failed to delete user');
         }
     }
 }

@@ -34,7 +34,6 @@ class AccountController extends Controller
 
     public function authenticate(Request $request)
     {
-
         try {
             $validator = Validator::make($request->all(), [
                 'username' => ['required'],
@@ -43,14 +42,14 @@ class AccountController extends Controller
             if ($validator->fails()) throw new Exception($validator->errors());
     
             if (Auth::attempt(['username' => $request->username, 'password' => $request->password, 'is_active' => 1])) {
+                logStore(LOGIN_ADMIN, json_encode($request->all()), STATUS_SUCCESS);
                 $request->session()->regenerate();
-                logStore(LOGIN_SUCCESS, json_encode($request->all()), STATUS_SUCCESS);
                 return redirect()->route('dashboard');
             } else {
                 throw new Exception('The provided credentials do not match our records');
             }
         } catch (Exception $e) {
-            logStore(LOGIN_FAILED, $e->getMessage(), STATUS_ERROR);
+            logStore(LOGIN_ADMIN, $e->getMessage(), STATUS_ERROR);
             return back()->with(STATUS_ERROR, 'The provided credentials do not match our records.');
         }
 
