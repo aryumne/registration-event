@@ -29,17 +29,7 @@ class ThankyouController extends Controller
      */
     public function showThankyou(Request $request)
     {
-        /*
-         * If there's an ajax request to the login page assume the person has been
-         * logged out and redirect them to the login page
-         */
-        $data = [
-            'question1' => 0
-        ];
-        
-        echo "<script>setTimeout(function(){ window.location.href = '/'; }, 5000);</script>";
-
-        return view('searce.congrats', $data);
+        return view('searce.congrats');
     }
 
 }
