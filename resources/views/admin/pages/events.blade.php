@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-12">
             <!-- Button trigger modal -->
-            <button class="btn btn-warning mb-3" type="button" data-bs-toggle="modal" data-bs-target="#addEventModal">New
+            <button class="btn btn-primary mb-3" type="button" data-bs-toggle="modal" data-bs-target="#addEventModal">New
                 Event</button>
             @if (session('success'))
                 <div class="alert alert-info mb-2" role="alert">

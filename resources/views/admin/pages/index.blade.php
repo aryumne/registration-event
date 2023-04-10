@@ -6,7 +6,7 @@
         <div class="col-9">
             <form action="{{ route('users.export') }}" method="POST">
                 @csrf
-                <button class="btn btn-warning mb-3" type="submit">Export Data</button>
+                <button class="btn btn-success mb-3" type="submit">Export Data</button>
             </form>
         </div>
         <div class="col-3 pe-4 text-end">

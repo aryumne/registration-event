@@ -10,3 +10,5 @@ define('UPDATE_EVENT', 'Update Event');
 define('CREATE_ACCOUNT', 'Create Account');
 define('UPDATE_ACCOUNT', 'Update Account');
 define('MANAGE_AUTHORIZATION', 'Manage Authorization');
+define('LOGIN_SUCCESS', 'Authentication successfully');
+define('LOGIN_FAILED', 'Authentication failed');

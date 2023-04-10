@@ -33,7 +33,8 @@ Route::prefix('admin')->group(function () {
     Route::middleware(['auth', 'prevent-back-history'])->group(function () {
         Route::get('/accounts', [AccountController::class, 'index'])->name('accounts.index')->middleware('can:mng-accounts');
         Route::post('/register', [AccountController::class, 'storeAccount'])->name('accounts.store')->middleware('can:create-account');
-        Route::post('/deactivate/{uuid}', [AccountController::class, 'deactivateAccount'])->name('accounts.deactivate')->middleware('can:edit-account');
+        Route::get('/account/{uuid}', [AccountController::class, 'edit'])->name('accounts.setting')->middleware('can:edit-account');
+        Route::patch('/account/{uuid}', [AccountController::class, 'update'])->name('accounts.update')->middleware('can:edit-account');
         Route::post('/logout', [AccountController::class, 'destroy'])->name('accounts.destroy');
         Route::get('/dashboard', [IndexController::class, 'dashboard'])->name('dashboard')->middleware('can:mng-users');
         Route::post('/users/download', [UserRegisterController::class, 'exportUsers'])->name('users.export')->middleware('can:mng-users');

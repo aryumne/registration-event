@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-12">
             <!-- Button trigger modal -->
-            <button class="btn btn-warning mb-3" type="button" data-bs-toggle="modal" data-bs-target="#addAccountModal">New
+            <button class="btn btn-primary mb-3" type="button" data-bs-toggle="modal" data-bs-target="#addAccountModal">New
                 Account</button>
             @if (session('success'))
                 <div class="alert alert-info mb-2" role="alert">
@@ -51,8 +51,16 @@
                             <td>{{ $account->username }}</td>
                             <td>{{ $account->name }}</td>
                             <td>{{ $account->email }}</td>
-                            <td>{{ $account->is_active }}</td>
-                            <td>{{ 'action' }}</td>
+                            <td>
+                                {!! $account->is_active ?
+                                '<span class="badge bg-success">Active</span>' : '<span class="badge bg-danger">Disable</span>'
+                                !!}
+                            </td>
+                            <td>
+                                <a class="btn btn-warning" href="{{ route('accounts.setting', $account->id) }}">
+                                    Edit
+                                </a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -89,10 +97,10 @@
                         <div class="mb-3">
                             <label for="exampleFormControlInput1">Password</label>
                             <div class="row">
-                                <div class="col-9">
+                                <div class="col-md-9 col-8">
                                     <input class="form-control" id="password" type="text" name="password" required>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-md-3 col-4">
                                     <button type="button" class="btn btn-success" id="generate">Generate</button>
                                 </div>
                             </div>
@@ -100,6 +108,7 @@
                         <div class="mb-3">
                             <label for="roleID">Role</label>
                             <select class="form-control" id="roleID" name="role_id" required>
+                                <option value="">-- Choose Role --</option>
                                 @foreach ($roles as $role)
                                     <option value="{{ $role->id }}"
                                         {{ old('role_id') == $role->id ? 'selected' : null }}>
@@ -111,6 +120,7 @@
                         <div class="mb-3">
                             <label for="eventID">Event</label>
                             <select class="form-control" id="eventID" name="event_id" required>
+                                <option value="">-- Choose Event --</option>
                                 @foreach ($events as $event)
                                     <option value="{{ $event->id }}"
                                         {{ old('event_id') == $event->id ? 'selected' : null }}>
