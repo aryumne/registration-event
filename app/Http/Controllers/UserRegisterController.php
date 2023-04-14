@@ -54,6 +54,8 @@ class UserRegisterController extends Controller
 
         foreach ($users as $user) {
             unset($user['api_token']);
+            $user['created at'] = $user->created_at->toDateString();
+            unset($user['deleted_at']);
             unset($user['created_at']);
             unset($user['updated_at']);
             $data[] = $user;

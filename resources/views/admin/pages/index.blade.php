@@ -29,6 +29,7 @@
                         <th>Email</th>
                         <th>Phone number</th>
                         <th>Event</th>
+                        <th>Created at</th>
                         <th>action</th>
                     </tr>
                 </thead>
@@ -41,6 +42,7 @@
                         <th>Email</th>
                         <th>Phone number</th>
                         <th>Event</th>
+                        <th>Created at</th>
                         <th>action</th>
                     </tr>
                 </tfoot>
@@ -54,6 +56,7 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->phone }}</td>
                             <td>{{ $user->subqis }}</td>
+                            <td>{{ $user->created_at->toDateString() }}</td>
                             <td>
                                 <form action="{{ route('users.destroy', $user->id) }}" method="POST">
                                     @csrf
