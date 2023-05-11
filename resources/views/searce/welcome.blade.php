@@ -156,7 +156,7 @@
                 </div>
                 <div class="col-9 d-flex align-items-center p-lg-5 p-md-3 p-sm-2">
                     <p class="desc-service" style="text-align:justify !important;">
-                        <strong style="color:#0769FF;" class="fws-bold">Jojonomics</strong> provides Officeless Operating System, a no-code application development platform designed to help companies easily build and develop mobile and web applications without requiring extensive coding or programming skills. Use case includes HRIS, Expense Management, HSE System, Procurement Solution..
+                        <strong style="color:#0769FF;" class="fws-bold">Jojonomics</strong> provides Officeless Operating System, a no-code application development platform designed to help companies easily build and develop mobile and web applications without requiring extensive coding or programming skills. Use case includes HRIS, Expense Management, HSE System, Procurement Solution.
                     </p>
                 </div>
             </div> <!-- row -->
